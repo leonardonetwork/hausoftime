@@ -6,8 +6,11 @@ return [
         'description' => 'A marketplace for verified luxury watches. Protected payment, fully insured FedEx shipping and funds released only after your confirmation.',
     ],
     'nav' => [
+        'all_desc' => 'The full certified collection', 'fav_desc' => 'The pieces you have saved',
+        'sell_desc' => 'Join as a founding seller', 'eval_desc' => 'Free indicative valuation',
+        'featured' => 'Featured piece', 'pieces' => '{0} Coming soon|{1} 1 piece|[2,*] :count pieces',
         'menu' => 'Menu', 'close' => 'Close', 'watches' => 'Watches', 'all_watches' => 'All watches',
-        'brands' => 'Brands', 'categories' => 'Collections', 'sell' => 'Sell with HAUS OF TIME',
+        'brands' => 'Brands', 'categories' => 'Collections', 'sell' => 'Sell your watch',
         'evaluation' => 'Value your watch', 'account' => 'My account', 'orders' => 'My orders',
         'favorites' => 'Favourites', 'bag' => 'Bag', 'login' => 'Sign in', 'register' => 'Create account',
         'logout' => 'Sign out', 'seller_area' => 'Seller area', 'admin' => 'Administration',
@@ -45,7 +48,6 @@ return [
         'reserved'    => 'Reserved',
     ],
     'product' => [
-        'about'        => 'About this piece',
         'details'      => 'Specifications',
         'brand'        => 'Brand', 'model' => 'Model', 'reference' => 'Reference', 'year' => 'Year',
         'condition'    => 'Condition', 'box_papers' => 'Box & papers', 'case_size' => 'Case size',

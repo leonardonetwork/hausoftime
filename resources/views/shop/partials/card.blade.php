@@ -4,7 +4,7 @@
   $isFav = in_array($watch->id, $favoriteIds ?? [], true);
   $urls = $watch->image_urls;
   $sold = $watch->status === 'sold';
-  $priceFmt = fn ($v) => 'EUR ' . number_format((float) $v, 0, app()->getLocale() === 'en' ? '.' : ',', app()->getLocale() === 'en' ? ',' : '.');
+  $priceFmt = fn ($v) => \App\Models\Watch::display($v);
 @endphp
 <article class="hs-card {{ $sold ? 'hs-card--sold' : '' }}">
   @if($watch->is_certified)

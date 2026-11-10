@@ -116,6 +116,14 @@ class Watch extends Model
         return self::money($this->price);
     }
 
+    /** Prezzo per il negozio: "8.000 €" (es) · "€8,000" (en). */
+    public static function display($amount): string
+    {
+        return app()->getLocale() === 'en'
+            ? '€' . number_format((float) $amount, 0, '.', ',')
+            : number_format((float) $amount, 0, ',', '.') . ' €';
+    }
+
     public static function money($amount, bool $decimals = false): string
     {
         return number_format((float) $amount, $decimals ? 2 : 0, ',', '.') . ' €';
@@ -176,7 +184,7 @@ class Watch extends Model
     {
         $en = app()->getLocale() === 'en';
         return match ($this->condition) {
-            'mint'       => $en ? 'Mint / Unworn' : 'Mint / Nunca usado',
+            'mint'       => $en ? 'Unworn' : 'Sin estrenar',
             'excellent'  => $en ? 'Excellent' : 'Excelente',
             'very_good'  => $en ? 'Very good' : 'Muy bueno',
             'good'       => $en ? 'Good' : 'Bueno',
@@ -189,9 +197,9 @@ class Watch extends Model
     {
         $en = app()->getLocale() === 'en';
         return match ($this->box_papers) {
-            'full_set'    => $en ? 'Full set (box & papers)' : 'Full set (caja y documentos)',
-            'box_only'    => $en ? 'Box only' : 'Solo caja',
-            'papers_only' => $en ? 'Papers only' : 'Solo documentos',
+            'full_set'    => $en ? 'Full set (box & papers)' : 'Completo (estuche y documentación)',
+            'box_only'    => $en ? 'Box only' : 'Solo estuche',
+            'papers_only' => $en ? 'Papers only' : 'Solo documentación',
             default       => $en ? 'Watch only' : 'Solo reloj',
         };
     }

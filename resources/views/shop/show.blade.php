@@ -3,7 +3,7 @@
 @php
   $en = app()->getLocale() === 'en';
   $urls = $watch->image_urls;
-  $priceFmt = fn ($v) => 'EUR ' . number_format((float) $v, 0, $en ? '.' : ',', $en ? ',' : '.');
+  $priceFmt = fn ($v) => \App\Models\Watch::display($v);
   $isFav = in_array($watch->id, $favoriteIds, true);
   $user = auth()->user();
   $own = $user && (int) $user->id === (int) $watch->seller_id;
@@ -60,7 +60,7 @@
       @endif
       <div class="hs-card__body">
         <div class="hs-card__info">
-          <h1 class="hs-card__title">{{ $watch->model }}@if($watch->reference)<span>Ref. {{ $watch->reference }}</span>@endif</h1>
+          <div class="hs-card__title">{{ $watch->model }}@if($watch->reference)<span>Ref. {{ $watch->reference }}</span>@endif</div>
           <div class="hs-card__lines">
             @foreach(array_slice(array_values(array_diff($watch->card_lines, ['Ref. ' . $watch->reference])), 0, 3) as $line)<div>{{ $line }}</div>@endforeach
           </div>
@@ -82,7 +82,9 @@
 
     {{-- About this piece --}}
     <div class="hs-pinfo">
-      <h2 class="hs-about">{{ __('shop.product.about') }}</h2>
+      <p class="hs-ptitle__brand">{{ $brand?->name ?? $watch->brand }}</p>
+      <h1 class="hs-ptitle">{{ $watch->model }}</h1>
+      <p class="hs-ptitle__sub">{{ implode(' · ', array_filter([$watch->reference ? 'Ref. ' . $watch->reference : null, $watch->manufacture_year, $watch->case_size])) }}</p>
       @if($desc)<div class="hs-desc">{{ $desc }}</div>@endif
 
       <div class="hs-buy">

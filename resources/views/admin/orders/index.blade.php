@@ -9,7 +9,7 @@
   <div class="stat-card"><div class="stat-card__num">{{ $m($stats['revenue']) }}</div><div class="stat-card__label">Ventas cobradas · {{ $stats['orders'] }} pedidos</div></div>
   <div class="stat-card"><div class="stat-card__num">{{ $m($stats['commission']) }}</div><div class="stat-card__label">Comisiones HOT</div></div>
   <div class="stat-card"><div class="stat-card__num">{{ $m($stats['escrow']) }}</div><div class="stat-card__label">Fondos retenidos (a liquidar)</div></div>
-  <div class="stat-card"><div class="stat-card__num" style="{{ $stats['late'] ? 'color:#e08080' : '' }}">{{ $stats['to_ship'] }}</div><div class="stat-card__label">Por enviar @if($stats['late'])· {{ $stats['late'] }} con retraso @endif @if($stats['disputed'])· {{ $stats['disputed'] }} incidencias @endif</div></div>
+  <div class="stat-card"><div class="stat-card__num" style="{{ $stats['late'] ? 'color:var(--a-danger)' : '' }}">{{ $stats['to_ship'] }}</div><div class="stat-card__label">Por enviar @if($stats['late'])· {{ $stats['late'] }} con retraso @endif @if($stats['disputed'])· {{ $stats['disputed'] }} incidencias @endif</div></div>
 </div>
 
 <div class="panel-header">

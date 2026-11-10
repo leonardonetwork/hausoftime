@@ -4,6 +4,10 @@
   $navCategories = \App\Models\WatchCategory::active()->orderBy('sort_order')->orderBy('name_es')->get();
   $footerPages = \App\Models\Page::active()->orderBy('sort_order')->get();
   $authUser = auth()->user();
+  $pubCounts = \App\Models\Watch::published()->selectRaw('brand, category')->get();
+  $brandCount = fn ($b) => $pubCounts->whereIn('brand', array_filter([$b->name_es, $b->name_en]))->count();
+  $catCount = fn ($c) => $pubCounts->whereIn('category', array_filter([$c->name_es, $c->name_en]))->count();
+  $featured = \App\Models\Watch::published()->orderByDesc('is_featured')->latest('approved_at')->first();
   $favCount = $authUser ? $authUser->favorites()->count() : count(session('hot_favorites', []));
 @endphp
 <!DOCTYPE html>
@@ -81,45 +85,84 @@
     <div class="hs-drawer__scrim" data-drawer-close></div>
     <aside class="hs-drawer__panel" role="dialog" aria-modal="true" aria-label="{{ __('shop.nav.menu') }}">
       <div class="hs-drawer__top">
-        <img src="/images/logo-dark.png" alt="HAUS OF TIME">
+        <a href="{{ route('home') }}"><img src="/images/logo-dark.png" alt="HAUS OF TIME"></a>
         <button class="hs-close" type="button" data-drawer-close aria-label="{{ __('shop.nav.close') }}">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5 5 19"/></svg>
         </button>
       </div>
-      <nav>
-        <a class="hs-drawer__big" href="{{ route('shop.index') }}">{{ __('shop.nav.all_watches') }} <span>→</span></a>
-        <a class="hs-drawer__big" href="{{ route('favorites.index') }}">{{ __('shop.nav.favorites') }}</a>
-        <a class="hs-drawer__big" href="{{ route('sell') }}">{{ __('shop.nav.sell') }}</a>
-        @if($navBrands->count())
-          <div class="hs-drawer__label">{{ __('shop.nav.brands') }}</div>
-          <div class="hs-drawer__chips">
-            @foreach($navBrands as $b)<a href="{{ route('shop.index', ['marca' => $b->slug]) }}">{{ $b->name }}</a>@endforeach
-          </div>
-        @endif
-        @if($navCategories->count())
-          <div class="hs-drawer__label">{{ __('shop.nav.categories') }}</div>
-          @foreach($navCategories as $c)<a class="hs-drawer__small" href="{{ route('shop.index', ['categoria' => $c->slug]) }}">{{ $c->name }}</a>@endforeach
-        @endif
-        <div class="hs-drawer__label">{{ __('shop.nav.account') }}</div>
-        @auth
-          @if($authUser->isAdmin())<a class="hs-drawer__small" href="{{ route('admin.dashboard') }}">{{ __('shop.nav.admin') }}</a>@endif
-          @if($authUser->isSeller())<a class="hs-drawer__small" href="{{ route('seller.dashboard') }}">{{ __('shop.nav.seller_area') }}</a>@endif
-          <a class="hs-drawer__small" href="{{ route('account.orders') }}">{{ __('shop.nav.orders') }}</a>
-          <a class="hs-drawer__small" href="{{ route('account.profile') }}">{{ __('shop.account.profile') }}</a>
-          <form method="POST" action="{{ route('logout') }}">@csrf<button class="hs-drawer__small" style="background:none;border:0;padding:7px 0;font-size:14px">{{ __('shop.nav.logout') }}</button></form>
-        @else
-          <a class="hs-drawer__small" href="{{ route('account.login') }}">{{ __('shop.nav.login') }}</a>
-          <a class="hs-drawer__small" href="{{ route('account.register') }}">{{ __('shop.nav.register') }}</a>
-        @endauth
-        <a class="hs-drawer__small" href="{{ route('evaluation.index') }}">{{ __('shop.nav.evaluation') }}</a>
-        <a class="hs-drawer__small" href="{{ route('contact') }}">{{ __('shop.nav.contact') }}</a>
+
+      <nav class="hs-dnav" aria-label="{{ __('shop.nav.menu') }}">
+        @foreach([
+          ['01', route('shop.index'), __('shop.nav.watches'), __('shop.nav.all_desc')],
+          ['02', route('favorites.index'), __('shop.nav.favorites'), __('shop.nav.fav_desc')],
+          ['03', route('sell'), __('shop.nav.sell'), __('shop.nav.sell_desc')],
+          ['04', route('evaluation.index'), __('shop.nav.evaluation'), __('shop.nav.eval_desc')],
+        ] as [$n, $href, $label, $desc])
+          <a class="hs-dnav__item" href="{{ $href }}">
+            <span class="hs-dnav__n">{{ $n }}</span>
+            <span class="hs-dnav__txt"><span class="hs-dnav__label">{{ $label }}</span><span class="hs-dnav__desc">{{ $desc }}</span></span>
+            <svg class="hs-dnav__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 12h15M14 7l5 5-5 5"/></svg>
+          </a>
+        @endforeach
       </nav>
-      <div class="hs-drawer__foot">
-        <span>{{ __('shop.footer.secure') }}</span>
-        <span class="hs-lang" style="display:flex">
-          <a href="{{ route('lang.switch', 'es') }}" class="{{ $locale === 'es' ? 'on' : '' }}">ES</a>
-          <a href="{{ route('lang.switch', 'en') }}" class="{{ $locale === 'en' ? 'on' : '' }}">EN</a>
-        </span>
+
+      @if($navBrands->count())
+        <div class="hs-dsec">
+          <div class="hs-dsec__t">{{ __('shop.nav.brands') }}</div>
+          <div class="hs-dlist">
+            @foreach($navBrands as $b)
+              @php $cnt = $brandCount($b); @endphp
+              <a href="{{ route('shop.index', ['marca' => $b->slug]) }}" class="{{ $cnt ? '' : 'is-empty' }}"><span>{{ $b->name }}</span><em>{{ $cnt ?: '—' }}</em></a>
+            @endforeach
+          </div>
+        </div>
+      @endif
+
+      @if($navCategories->count())
+        <div class="hs-dsec">
+          <div class="hs-dsec__t">{{ __('shop.nav.categories') }}</div>
+          <div class="hs-dlist">
+            @foreach($navCategories as $c)
+              @php $cnt = $catCount($c); @endphp
+              <a href="{{ route('shop.index', ['categoria' => $c->slug]) }}" class="{{ $cnt ? '' : 'is-empty' }}"><span>{{ $c->name }}</span><em>{{ $cnt ?: '—' }}</em></a>
+            @endforeach
+          </div>
+        </div>
+      @endif
+
+      @if($featured && $featured->cover_url)
+        <a class="hs-dfeat" href="{{ route('shop.show', $featured->slug) }}">
+          <img src="{{ $featured->cover_url }}" alt="{{ $featured->title }}" loading="lazy">
+          <span>
+            <small>{{ __('shop.nav.featured') }}</small>
+            <strong>{{ $featured->brand }} {{ $featured->model }}</strong>
+            <em>{{ \App\Models\Watch::display($featured->effective_price) }}</em>
+          </span>
+          @if($featured->is_certified)<img class="seal" src="/images/shop/seal.png" alt="">@endif
+        </a>
+      @endif
+
+      <div class="hs-dfoot">
+        <div class="hs-dfoot__links">
+          @auth
+            @if($authUser->isAdmin())<a href="{{ route('admin.dashboard') }}">{{ __('shop.nav.admin') }}</a>@endif
+            @if($authUser->isSeller())<a href="{{ route('seller.dashboard') }}">{{ __('shop.nav.seller_area') }}</a>@endif
+            <a href="{{ route('account.orders') }}">{{ __('shop.nav.orders') }}</a>
+            <a href="{{ route('account.profile') }}">{{ __('shop.nav.account') }}</a>
+            <form method="POST" action="{{ route('logout') }}">@csrf<button type="submit">{{ __('shop.nav.logout') }}</button></form>
+          @else
+            <a href="{{ route('account.login') }}">{{ __('shop.nav.login') }}</a>
+            <a href="{{ route('account.register') }}">{{ __('shop.nav.register') }}</a>
+          @endauth
+          <a href="{{ route('contact') }}">{{ __('shop.nav.contact') }}</a>
+        </div>
+        <div class="hs-dfoot__bar">
+          <span>{{ __('shop.footer.secure') }}</span>
+          <span class="hs-dfoot__lang">
+            <a href="{{ route('lang.switch', 'es') }}" class="{{ $locale === 'es' ? 'on' : '' }}">ES</a>
+            <a href="{{ route('lang.switch', 'en') }}" class="{{ $locale === 'en' ? 'on' : '' }}">EN</a>
+          </span>
+        </div>
       </div>
     </aside>
   </div>

@@ -2,11 +2,11 @@
      resources/views/admin/dashboard.blade.php
 ============================================================ --}}
 @extends('layouts.admin')
-@section('title','Dashboard')
+@section('title','Panel')
 
 @section('admin-content')
-<div class="page-title">Dashboard</div>
-<p class="page-subtitle">{{ now()->format('d F Y') }}</p>
+<div class="page-title">Panel</div>
+<p class="page-subtitle">{{ ucfirst(now()->translatedFormat('l, j \d\e F \d\e Y')) }}</p>
 
 {{-- ── Modo del sitio ─────────────────────────────── --}}
 <div class="site-mode {{ $siteMode === 'live' ? 'is-live' : '' }}">
@@ -34,7 +34,7 @@
   <div class="stat-card"><div class="stat-card__num">{{ $shop['orders_month'] }}</div><div class="stat-card__label">Pedidos este mes</div></div>
   <div class="stat-card"><div class="stat-card__num">{{ $shop['published'] }}</div><div class="stat-card__label">Relojes publicados</div></div>
   <a class="stat-card" href="{{ route('admin.orders.index') }}"><div class="stat-card__num" style="{{ $shop['to_ship'] ? 'color:var(--a-warning)' : '' }}">{{ $shop['to_ship'] }}</div><div class="stat-card__label">Pendientes de envío</div></a>
-  <a class="stat-card" href="{{ route('admin.orders.index', ['status' => 'disputed']) }}"><div class="stat-card__num" style="{{ $shop['disputed'] ? 'color:#e08080' : '' }}">{{ $shop['disputed'] }}</div><div class="stat-card__label">Incidencias</div></a>
+  <a class="stat-card" href="{{ route('admin.orders.index', ['status' => 'disputed']) }}"><div class="stat-card__num" style="{{ $shop['disputed'] ? 'color:var(--a-danger)' : '' }}">{{ $shop['disputed'] }}</div><div class="stat-card__label">Incidencias</div></a>
 </div>
 
 @if($recentOrders->count())

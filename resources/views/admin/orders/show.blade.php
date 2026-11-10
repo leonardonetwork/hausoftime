@@ -36,12 +36,12 @@
             <dt>Envío + seguro</dt><dd>{{ $m($item->shipping) }} + {{ $m($item->insurance) }} <span style="color:var(--a-subtle)">({{ $item->shipping_rate_name }})</span></dd>
             <dt>Comisión</dt><dd>{{ rtrim(rtrim(number_format($item->commission_rate, 2, ',', '.'), '0'), ',') }} % · {{ $m($item->commission_amount) }}</dd>
             <dt>A liquidar</dt><dd style="font-weight:600">{{ $m($item->seller_payout) }} @if($item->stripe_transfer_id)<span style="color:var(--a-subtle);font-size:11px">({{ $item->stripe_transfer_id }})</span>@endif</dd>
-            @if($item->ship_by && !$item->shipped_at)<dt>Enviar antes de</dt><dd style="{{ $item->ship_by->isPast() ? 'color:#e08080' : '' }}">{{ $item->ship_by->format('d/m/Y') }}</dd>@endif
+            @if($item->ship_by && !$item->shipped_at)<dt>Enviar antes de</dt><dd style="{{ $item->ship_by->isPast() ? 'color:var(--a-danger)' : '' }}">{{ $item->ship_by->format('d/m/Y') }}</dd>@endif
             @if($item->tracking_number)<dt>Seguimiento</dt><dd>{{ strtoupper($item->carrier) }} {{ $item->tracking_number }} @if($item->tracking_link)<a href="{{ $item->tracking_link }}" target="_blank" style="color:var(--a-gold)">↗</a>@endif · {{ $item->shipped_at?->format('d/m/Y') }}</dd>@endif
             @if($item->release_due_at && !$item->released_at)<dt>Liberación auto.</dt><dd>{{ $item->release_due_at->format('d/m/Y') }}</dd>@endif
             @if($item->released_at)<dt>Liberado</dt><dd>{{ $item->released_at->format('d/m/Y H:i') }}</dd>@endif
             @if($item->refunded_at)<dt>Reembolsado</dt><dd>{{ $m($item->refunded_amount) }} · {{ $item->refunded_at->format('d/m/Y') }}</dd>@endif
-            @if($item->dispute_reason)<dt>Incidencia</dt><dd style="color:#e0b870">{{ $item->dispute_reason }}</dd>@endif
+            @if($item->dispute_reason)<dt>Incidencia</dt><dd style="color:var(--a-warning)">{{ $item->dispute_reason }}</dd>@endif
           </dl>
 
           <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px">

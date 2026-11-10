@@ -25,6 +25,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'shop'   => \App\Http\Middleware\EnsureShopOpen::class,
         ]);
         $middleware->validateCsrfTokens(except: ['stripe/webhook']);
+        $middleware->encryptCookies(except: ['hot_admin_theme']);
         $middleware->redirectGuestsTo(fn ($request) => $request->is('cuenta*', 'checkout*', 'favoritos*')
             ? route('account.login') : route('login'));
     })

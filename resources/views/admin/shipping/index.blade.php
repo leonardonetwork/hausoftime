@@ -16,7 +16,7 @@
   </form>
   <div style="font-size:11px;color:var(--a-subtle);margin:10px 0 14px">{{ $zone->enabled_count }} países habilitados de {{ $zone->countries_count }} asignados
     @if(!$zone->countries_count)
-      · <form method="POST" action="{{ route('admin.shipping.zones.destroy', $zone) }}" style="display:inline" onsubmit="return confirm('¿Eliminar zona?')">@csrf @method('DELETE')<button style="background:none;border:0;color:#e08080;cursor:pointer;font-size:11px">Eliminar zona</button></form>
+      · <form method="POST" action="{{ route('admin.shipping.zones.destroy', $zone) }}" style="display:inline" onsubmit="return confirm('¿Eliminar zona?')">@csrf @method('DELETE')<button style="background:none;border:0;color:var(--a-danger);cursor:pointer;font-size:11px">Eliminar zona</button></form>
     @endif
   </div>
 
