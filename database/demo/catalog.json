@@ -1,0 +1,1532 @@
+[
+ {
+  "key": "rolex-submariner-date-126610ln",
+  "brand": "Rolex",
+  "model": "Submariner Date",
+  "reference": "126610LN",
+  "year": 2022,
+  "case_size": "41 mm",
+  "material_es": "Acero Oystersteel, bisel Cerachrom negro",
+  "material_en": "Oystersteel, black Cerachrom bezel",
+  "price": 13900,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    16,
+    17,
+    20
+   ],
+   "bezel": [
+    22,
+    22,
+    24
+   ],
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 100
+  },
+  "description_es": "El buceador de referencia, con calibre 3235 y reserva de marcha de 70 horas.\n\nPieza de 2022, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 41 mm: Acero Oystersteel, bisel Cerachrom negro.",
+  "description_en": "The benchmark diver, powered by the calibre 3235 with a 70-hour power reserve.\n\nA 2022 piece, in excellent condition. Supplied as a full set, with original box and papers. 41 mm case: Oystersteel, black Cerachrom bezel."
+ },
+ {
+  "key": "rolex-submariner-124060",
+  "brand": "Rolex",
+  "model": "Submariner",
+  "reference": "124060",
+  "year": 2021,
+  "case_size": "41 mm",
+  "material_es": "Acero Oystersteel",
+  "material_en": "Oystersteel",
+  "price": 11500,
+  "condition": "very_good",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    15,
+    15,
+    18
+   ],
+   "bezel": [
+    20,
+    20,
+    22
+   ],
+   "strap": "bracelet",
+   "date": false,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 101
+  },
+  "description_es": "La versión sin fecha, de esfera limpia y perfil simétrico.\n\nPieza de 2021, en muy buen estado. Se entrega completo, con estuche y documentación original. Caja de 41 mm: Acero Oystersteel.",
+  "description_en": "The no-date version, with a clean dial and a symmetrical profile.\n\nA 2021 piece, in very good condition. Supplied as a full set, with original box and papers. 41 mm case: Oystersteel."
+ },
+ {
+  "key": "rolex-gmt-master-ii-126710blnr",
+  "brand": "Rolex",
+  "model": "GMT-Master II",
+  "reference": "126710BLNR",
+  "year": 2023,
+  "case_size": "40 mm",
+  "material_es": "Acero, bisel bicolor azul y negro",
+  "material_en": "Steel, blue and black two-tone bezel",
+  "price": 18500,
+  "condition": "mint",
+  "box_papers": "full_set",
+  "category": "Complications",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    14,
+    15,
+    18
+   ],
+   "bezel": [
+    24,
+    52,
+    110
+   ],
+   "strap": "jubilee",
+   "date": true,
+   "accent": [
+    40,
+    110,
+    70
+   ],
+   "seed": 102
+  },
+  "description_es": "Segundo huso horario y brazalete Jubilee: el compañero de viaje por excelencia.\n\nPieza de 2023, sin estrenar. Se entrega completo, con estuche y documentación original. Caja de 40 mm: Acero, bisel bicolor azul y negro.",
+  "description_en": "A second time zone on a Jubilee bracelet: the ultimate travel companion.\n\nA 2023 piece, unworn. Supplied as a full set, with original box and papers. 40 mm case: Steel, blue and black two-tone bezel."
+ },
+ {
+  "key": "rolex-cosmograph-daytona-116500ln",
+  "brand": "Rolex",
+  "model": "Cosmograph Daytona",
+  "reference": "116500LN",
+  "year": 2019,
+  "case_size": "40 mm",
+  "material_es": "Acero, bisel cerámico negro",
+  "material_en": "Steel, black ceramic bezel",
+  "price": 27500,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "chrono",
+   "case": "steel",
+   "dial": [
+    238,
+    236,
+    230
+   ],
+   "bezel": [
+    22,
+    22,
+    24
+   ],
+   "strap": "bracelet",
+   "date": false,
+   "accent": [
+    200,
+    40,
+    40
+   ],
+   "subdials": 3,
+   "sub_color": [
+    26,
+    26,
+    28
+   ],
+   "seed": 103
+  },
+  "description_es": "Cronógrafo de esfera blanca con contadores negros, uno de los más buscados del mercado.\n\nPieza de 2019, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 40 mm: Acero, bisel cerámico negro.",
+  "description_en": "White-dial chronograph with black counters, one of the most sought-after on the market.\n\nA 2019 piece, in excellent condition. Supplied as a full set, with original box and papers. 40 mm case: Steel, black ceramic bezel."
+ },
+ {
+  "key": "rolex-datejust-41-126334",
+  "brand": "Rolex",
+  "model": "Datejust 41",
+  "reference": "126334",
+  "year": 2020,
+  "case_size": "41 mm",
+  "material_es": "Acero y oro blanco, bisel estriado",
+  "material_en": "Steel and white gold, fluted bezel",
+  "price": 12400,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Dress Watches",
+  "render": {
+   "style": "dress",
+   "case": "steel",
+   "dial": [
+    30,
+    58,
+    120
+   ],
+   "bezel": null,
+   "strap": "jubilee",
+   "date": true,
+   "seed": 104
+  },
+  "description_es": "Esfera azul sol, bisel estriado y fecha con lupa: un clásico que encaja en cualquier ocasión.\n\nPieza de 2020, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 41 mm: Acero y oro blanco, bisel estriado.",
+  "description_en": "Blue sunburst dial, fluted bezel and magnified date: a classic for any occasion.\n\nA 2020 piece, in excellent condition. Supplied as a full set, with original box and papers. 41 mm case: Steel and white gold, fluted bezel."
+ },
+ {
+  "key": "rolex-day-date-40-228238",
+  "brand": "Rolex",
+  "model": "Day-Date 40",
+  "reference": "228238",
+  "year": 2018,
+  "case_size": "40 mm",
+  "material_es": "Oro amarillo 18 qt, brazalete President",
+  "material_en": "18k yellow gold, President bracelet",
+  "price": 38900,
+  "condition": "very_good",
+  "box_papers": "full_set",
+  "category": "Luxury Watches",
+  "render": {
+   "style": "dress",
+   "case": "gold",
+   "dial": [
+    214,
+    186,
+    120
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": true,
+   "seed": 105
+  },
+  "description_es": "Oro macizo y esfera champán, con día de la semana completo en el arco superior.\n\nPieza de 2018, en muy buen estado. Se entrega completo, con estuche y documentación original. Caja de 40 mm: Oro amarillo 18 qt, brazalete President.",
+  "description_en": "Solid gold with a champagne dial and the full day of the week at the top.\n\nA 2018 piece, in very good condition. Supplied as a full set, with original box and papers. 40 mm case: 18k yellow gold, President bracelet."
+ },
+ {
+  "key": "rolex-explorer-224270",
+  "brand": "Rolex",
+  "model": "Explorer",
+  "reference": "224270",
+  "year": 2023,
+  "case_size": "40 mm",
+  "material_es": "Acero Oystersteel",
+  "material_en": "Oystersteel",
+  "price": 8900,
+  "condition": "mint",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "pilot",
+   "case": "steel",
+   "dial": [
+    14,
+    14,
+    16
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": false,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 106
+  },
+  "description_es": "Herramienta de exploración de lectura inmediata, sobria y muy versátil.\n\nPieza de 2023, sin estrenar. Se entrega completo, con estuche y documentación original. Caja de 40 mm: Acero Oystersteel.",
+  "description_en": "An exploration tool built for instant legibility, understated and versatile.\n\nA 2023 piece, unworn. Supplied as a full set, with original box and papers. 40 mm case: Oystersteel."
+ },
+ {
+  "key": "rolex-yacht-master-40-126622",
+  "brand": "Rolex",
+  "model": "Yacht-Master 40",
+  "reference": "126622",
+  "year": 2021,
+  "case_size": "40 mm",
+  "material_es": "Acero y platino, esfera pizarra",
+  "material_en": "Steel and platinum, slate dial",
+  "price": 13200,
+  "condition": "excellent",
+  "box_papers": "box_only",
+  "category": "Sports Watches",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    70,
+    74,
+    80
+   ],
+   "bezel": [
+    200,
+    202,
+    206
+   ],
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    30,
+    90,
+    170
+   ],
+   "seed": 107
+  },
+  "description_es": "Bisel de platino pulido y esfera gris pizarra, elegancia náutica discreta.\n\nPieza de 2021, en excelente estado. Se entrega con su estuche original. Caja de 40 mm: Acero y platino, esfera pizarra.",
+  "description_en": "Polished platinum bezel and slate grey dial, discreet nautical elegance.\n\nA 2021 piece, in excellent condition. Supplied with its original box. 40 mm case: Steel and platinum, slate dial."
+ },
+ {
+  "key": "omega-speedmaster-moonwatch-professional-310-30-42-50-01-001",
+  "brand": "Omega",
+  "model": "Speedmaster Moonwatch Professional",
+  "reference": "310.30.42.50.01.001",
+  "year": 2022,
+  "case_size": "42 mm",
+  "material_es": "Acero, cristal hesalita",
+  "material_en": "Steel, hesalite crystal",
+  "price": 6900,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Complications",
+  "render": {
+   "style": "chrono",
+   "case": "steel",
+   "dial": [
+    16,
+    16,
+    18
+   ],
+   "bezel": [
+    20,
+    20,
+    22
+   ],
+   "strap": "bracelet",
+   "date": false,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "subdials": 3,
+   "sub_color": [
+    24,
+    24,
+    26
+   ],
+   "seed": 108
+  },
+  "description_es": "Cronógrafo de carga manual con el calibre 3861, heredero directo del reloj de las misiones lunares.\n\nPieza de 2022, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 42 mm: Acero, cristal hesalita.",
+  "description_en": "Hand-wound chronograph with the calibre 3861, a direct heir of the lunar-mission watch.\n\nA 2022 piece, in excellent condition. Supplied as a full set, with original box and papers. 42 mm case: Steel, hesalite crystal."
+ },
+ {
+  "key": "omega-seamaster-diver-300m-210-30-42-20-03-001",
+  "brand": "Omega",
+  "model": "Seamaster Diver 300M",
+  "reference": "210.30.42.20.03.001",
+  "year": 2021,
+  "case_size": "42 mm",
+  "material_es": "Acero, bisel cerámico azul",
+  "material_en": "Steel, blue ceramic bezel",
+  "price": 5200,
+  "condition": "very_good",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    22,
+    48,
+    110
+   ],
+   "bezel": [
+    24,
+    46,
+    100
+   ],
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    220,
+    90,
+    40
+   ],
+   "seed": 109
+  },
+  "description_es": "Esfera ondulada azul y válvula de helio: un buceador con carácter.\n\nPieza de 2021, en muy buen estado. Se entrega completo, con estuche y documentación original. Caja de 42 mm: Acero, bisel cerámico azul.",
+  "description_en": "Blue wave dial and helium valve: a diver with character.\n\nA 2021 piece, in very good condition. Supplied as a full set, with original box and papers. 42 mm case: Steel, blue ceramic bezel."
+ },
+ {
+  "key": "omega-seamaster-aqua-terra-220-10-41-21-03-004",
+  "brand": "Omega",
+  "model": "Seamaster Aqua Terra",
+  "reference": "220.10.41.21.03.004",
+  "year": 2020,
+  "case_size": "41 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 5400,
+  "condition": "excellent",
+  "box_papers": "box_only",
+  "category": "Dress Watches",
+  "render": {
+   "style": "sport",
+   "case": "steel",
+   "dial": [
+    30,
+    66,
+    120
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 110
+  },
+  "description_es": "Esfera azul con motivo de teca y movimiento Master Chronometer.\n\nPieza de 2020, en excelente estado. Se entrega con su estuche original. Caja de 41 mm: Acero.",
+  "description_en": "Blue teak-pattern dial and Master Chronometer movement.\n\nA 2020 piece, in excellent condition. Supplied with its original box. 41 mm case: Steel."
+ },
+ {
+  "key": "omega-speedmaster-dark-side-of-the-moon-311-92-44-51-01-007",
+  "brand": "Omega",
+  "model": "Speedmaster Dark Side of the Moon",
+  "reference": "311.92.44.51.01.007",
+  "year": 2019,
+  "case_size": "44,25 mm",
+  "material_es": "Cerámica negra con correa de caucho",
+  "material_en": "Black ceramic on rubber strap",
+  "price": 9800,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Complications",
+  "render": {
+   "style": "chrono",
+   "case": "black",
+   "dial": [
+    20,
+    20,
+    22
+   ],
+   "bezel": [
+    26,
+    26,
+    28
+   ],
+   "strap": "rubber",
+   "strap_color": [
+    24,
+    24,
+    26
+   ],
+   "date": true,
+   "accent": [
+    220,
+    60,
+    40
+   ],
+   "subdials": 2,
+   "sub_color": [
+    34,
+    34,
+    36
+   ],
+   "seed": 111
+  },
+  "description_es": "Caja de cerámica negra pulida y fondo de zafiro: el Speedmaster más rotundo.\n\nPieza de 2019, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 44,25 mm: Cerámica negra con correa de caucho.",
+  "description_en": "Polished black ceramic case and sapphire caseback: the boldest Speedmaster.\n\nA 2019 piece, in excellent condition. Supplied as a full set, with original box and papers. 44,25 mm case: Black ceramic on rubber strap."
+ },
+ {
+  "key": "omega-constellation-131-10-39-20-02-001",
+  "brand": "Omega",
+  "model": "Constellation",
+  "reference": "131.10.39.20.02.001",
+  "year": 2022,
+  "case_size": "39 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 4900,
+  "condition": "mint",
+  "box_papers": "full_set",
+  "category": "Dress Watches",
+  "render": {
+   "style": "dress",
+   "case": "steel",
+   "dial": [
+    214,
+    214,
+    212
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": true,
+   "seed": 112
+  },
+  "description_es": "Línea elegante con garras laterales y esfera plateada de gran pureza.\n\nPieza de 2022, sin estrenar. Se entrega completo, con estuche y documentación original. Caja de 39 mm: Acero.",
+  "description_en": "Elegant line with side claws and a pure silver dial.\n\nA 2022 piece, unworn. Supplied as a full set, with original box and papers. 39 mm case: Steel."
+ },
+ {
+  "key": "audemars-piguet-royal-oak-selfwinding-15500st",
+  "brand": "Audemars Piguet",
+  "model": "Royal Oak Selfwinding",
+  "reference": "15500ST",
+  "year": 2020,
+  "case_size": "41 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 42000,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Luxury Watches",
+  "render": {
+   "style": "sport",
+   "case": "steel",
+   "dial": [
+    26,
+    44,
+    86
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 113
+  },
+  "description_es": "Icono del deporte de lujo con brazalete integrado y acabados de alta relojería.\n\nPieza de 2020, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 41 mm: Acero.",
+  "description_en": "The luxury sports icon with an integrated bracelet and fine finishing.\n\nA 2020 piece, in excellent condition. Supplied as a full set, with original box and papers. 41 mm case: Steel."
+ },
+ {
+  "key": "audemars-piguet-royal-oak-offshore-chronograph-26420so",
+  "brand": "Audemars Piguet",
+  "model": "Royal Oak Offshore Chronograph",
+  "reference": "26420SO",
+  "year": 2021,
+  "case_size": "43 mm",
+  "material_es": "Acero y cerámica, correa de caucho",
+  "material_en": "Steel and ceramic, rubber strap",
+  "price": 34500,
+  "condition": "very_good",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "chrono",
+   "case": "steel",
+   "dial": [
+    22,
+    22,
+    24
+   ],
+   "bezel": [
+    30,
+    30,
+    32
+   ],
+   "strap": "rubber",
+   "strap_color": [
+    26,
+    26,
+    28
+   ],
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "subdials": 3,
+   "sub_color": [
+    40,
+    40,
+    42
+   ],
+   "seed": 114
+  },
+  "description_es": "Cronógrafo de proporciones generosas y presencia indiscutible en la muñeca.\n\nPieza de 2021, en muy buen estado. Se entrega completo, con estuche y documentación original. Caja de 43 mm: Acero y cerámica, correa de caucho.",
+  "description_en": "A generously proportioned chronograph with undeniable wrist presence.\n\nA 2021 piece, in very good condition. Supplied as a full set, with original box and papers. 43 mm case: Steel and ceramic, rubber strap."
+ },
+ {
+  "key": "audemars-piguet-code-11-59-selfwinding-15210or",
+  "brand": "Audemars Piguet",
+  "model": "Code 11.59 Selfwinding",
+  "reference": "15210OR",
+  "year": 2022,
+  "case_size": "41 mm",
+  "material_es": "Oro rosa 18 qt, correa de piel",
+  "material_en": "18k rose gold, leather strap",
+  "price": 31000,
+  "condition": "mint",
+  "box_papers": "full_set",
+  "category": "Dress Watches",
+  "render": {
+   "style": "dress",
+   "case": "rose",
+   "dial": [
+    30,
+    34,
+    60
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    30,
+    30,
+    40
+   ],
+   "date": true,
+   "seed": 115
+  },
+  "description_es": "Caja de arquitectura compleja en oro rosa y esfera lacada de gran profundidad.\n\nPieza de 2022, sin estrenar. Se entrega completo, con estuche y documentación original. Caja de 41 mm: Oro rosa 18 qt, correa de piel.",
+  "description_en": "A complex rose gold case and a deep lacquered dial.\n\nA 2022 piece, unworn. Supplied as a full set, with original box and papers. 41 mm case: 18k rose gold, leather strap."
+ },
+ {
+  "key": "patek-philippe-nautilus-5711-1a-014",
+  "brand": "Patek Philippe",
+  "model": "Nautilus",
+  "reference": "5711/1A-014",
+  "year": 2021,
+  "case_size": "40 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 115000,
+  "condition": "mint",
+  "box_papers": "full_set",
+  "category": "Luxury Watches",
+  "render": {
+   "style": "sport",
+   "case": "steel",
+   "dial": [
+    70,
+    92,
+    60
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 116
+  },
+  "description_es": "Última serie con esfera verde oliva, una pieza de colección en estado impecable.\n\nPieza de 2021, sin estrenar. Se entrega completo, con estuche y documentación original. Caja de 40 mm: Acero.",
+  "description_en": "Final-series olive green dial, a collector piece in impeccable condition.\n\nA 2021 piece, unworn. Supplied as a full set, with original box and papers. 40 mm case: Steel."
+ },
+ {
+  "key": "patek-philippe-aquanaut-5167a-001",
+  "brand": "Patek Philippe",
+  "model": "Aquanaut",
+  "reference": "5167A-001",
+  "year": 2020,
+  "case_size": "40,8 mm",
+  "material_es": "Acero, correa tropical de composite",
+  "material_en": "Steel, composite tropical strap",
+  "price": 58000,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "sport",
+   "case": "steel",
+   "dial": [
+    30,
+    32,
+    34
+   ],
+   "bezel": null,
+   "strap": "rubber",
+   "strap_color": [
+    30,
+    32,
+    34
+   ],
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 117
+  },
+  "description_es": "Deportivo contemporáneo con esfera en relieve y correa a juego.\n\nPieza de 2020, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 40,8 mm: Acero, correa tropical de composite.",
+  "description_en": "A contemporary sports watch with an embossed dial and matching strap.\n\nA 2020 piece, in excellent condition. Supplied as a full set, with original box and papers. 40,8 mm case: Steel, composite tropical strap."
+ },
+ {
+  "key": "patek-philippe-calatrava-5227g-010",
+  "brand": "Patek Philippe",
+  "model": "Calatrava",
+  "reference": "5227G-010",
+  "year": 2019,
+  "case_size": "39 mm",
+  "material_es": "Oro blanco 18 qt, tapa oculta",
+  "material_en": "18k white gold, hunter caseback",
+  "price": 34000,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Dress Watches",
+  "render": {
+   "style": "dress",
+   "case": "steel",
+   "dial": [
+    236,
+    232,
+    220
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    22,
+    22,
+    24
+   ],
+   "date": true,
+   "seed": 118
+  },
+  "description_es": "La esencia del reloj de vestir: esfera marfil lacada y tapa trasera con bisagra.\n\nPieza de 2019, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 39 mm: Oro blanco 18 qt, tapa oculta.",
+  "description_en": "The essence of the dress watch: ivory lacquered dial and hinged caseback.\n\nA 2019 piece, in excellent condition. Supplied as a full set, with original box and papers. 39 mm case: 18k white gold, hunter caseback."
+ },
+ {
+  "key": "cartier-santos-de-cartier-wssa0018",
+  "brand": "Cartier",
+  "model": "Santos de Cartier",
+  "reference": "WSSA0018",
+  "year": 2022,
+  "case_size": "39,8 mm",
+  "material_es": "Acero, brazalete QuickSwitch",
+  "material_en": "Steel, QuickSwitch bracelet",
+  "price": 7300,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Luxury Watches",
+  "render": {
+   "style": "square",
+   "case": "steel",
+   "dial": [
+    232,
+    230,
+    224
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": false,
+   "seed": 119
+  },
+  "description_es": "Caja cuadrada con tornillos vistos y brazalete intercambiable sin herramientas.\n\nPieza de 2022, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 39,8 mm: Acero, brazalete QuickSwitch.",
+  "description_en": "Square case with exposed screws and a tool-free interchangeable bracelet.\n\nA 2022 piece, in excellent condition. Supplied as a full set, with original box and papers. 39,8 mm case: Steel, QuickSwitch bracelet."
+ },
+ {
+  "key": "cartier-tank-must-wsta0041",
+  "brand": "Cartier",
+  "model": "Tank Must",
+  "reference": "WSTA0041",
+  "year": 2022,
+  "case_size": "33,7 x 25,5 mm",
+  "material_es": "Acero, correa de piel negra",
+  "material_en": "Steel, black leather strap",
+  "price": 2900,
+  "condition": "mint",
+  "box_papers": "full_set",
+  "category": "Dress Watches",
+  "render": {
+   "style": "square",
+   "case": "steel",
+   "dial": [
+    238,
+    236,
+    232
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    18,
+    18,
+    20
+   ],
+   "date": false,
+   "quartz": true,
+   "seed": 120
+  },
+  "description_es": "Líneas rectangulares atemporales, discreto y perfecto para el día a día.\n\nPieza de 2022, sin estrenar. Se entrega completo, con estuche y documentación original. Caja de 33,7 x 25,5 mm: Acero, correa de piel negra.",
+  "description_en": "Timeless rectangular lines, discreet and perfect for every day.\n\nA 2022 piece, unworn. Supplied as a full set, with original box and papers. 33,7 x 25,5 mm case: Steel, black leather strap."
+ },
+ {
+  "key": "cartier-ballon-bleu-de-cartier-wsbb0049",
+  "brand": "Cartier",
+  "model": "Ballon Bleu de Cartier",
+  "reference": "WSBB0049",
+  "year": 2021,
+  "case_size": "42 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 6100,
+  "condition": "very_good",
+  "box_papers": "box_only",
+  "category": "Luxury Watches",
+  "render": {
+   "style": "dress",
+   "case": "steel",
+   "dial": [
+    220,
+    220,
+    224
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": true,
+   "seed": 121
+  },
+  "description_es": "Caja redondeada con corona protegida y esfera guilloché plateada.\n\nPieza de 2021, en muy buen estado. Se entrega con su estuche original. Caja de 42 mm: Acero.",
+  "description_en": "A rounded case with a protected crown and silver guilloché dial.\n\nA 2021 piece, in very good condition. Supplied with its original box. 42 mm case: Steel."
+ },
+ {
+  "key": "panerai-luminor-marina-pam01312",
+  "brand": "Panerai",
+  "model": "Luminor Marina",
+  "reference": "PAM01312",
+  "year": 2021,
+  "case_size": "44 mm",
+  "material_es": "Acero, correa de piel marrón",
+  "material_en": "Steel, brown leather strap",
+  "price": 6800,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "pilot",
+   "case": "steel",
+   "dial": [
+    18,
+    18,
+    20
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    110,
+    64,
+    34
+   ],
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 122
+  },
+  "description_es": "Esfera sándwich luminiscente y puente protector de corona característico.\n\nPieza de 2021, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 44 mm: Acero, correa de piel marrón.",
+  "description_en": "Luminous sandwich dial and the signature crown-protecting bridge.\n\nA 2021 piece, in excellent condition. Supplied as a full set, with original box and papers. 44 mm case: Steel, brown leather strap."
+ },
+ {
+  "key": "panerai-luminor-gmt-pam01088",
+  "brand": "Panerai",
+  "model": "Luminor GMT",
+  "reference": "PAM01088",
+  "year": 2020,
+  "case_size": "44 mm",
+  "material_es": "Acero, correa de piel",
+  "material_en": "Steel, leather strap",
+  "price": 7400,
+  "condition": "very_good",
+  "box_papers": "full_set",
+  "category": "Complications",
+  "render": {
+   "style": "pilot",
+   "case": "steel",
+   "dial": [
+    24,
+    24,
+    26
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    70,
+    44,
+    28
+   ],
+   "date": true,
+   "accent": [
+    220,
+    60,
+    40
+   ],
+   "seed": 123
+  },
+  "description_es": "Función GMT con indicación día/noche, ideal para quien viaja con frecuencia.\n\nPieza de 2020, en muy buen estado. Se entrega completo, con estuche y documentación original. Caja de 44 mm: Acero, correa de piel.",
+  "description_en": "GMT function with day/night indication, ideal for frequent travellers.\n\nA 2020 piece, in very good condition. Supplied as a full set, with original box and papers. 44 mm case: Steel, leather strap."
+ },
+ {
+  "key": "panerai-submersible-pam00683",
+  "brand": "Panerai",
+  "model": "Submersible",
+  "reference": "PAM00683",
+  "year": 2019,
+  "case_size": "42 mm",
+  "material_es": "Acero, correa de caucho",
+  "material_en": "Steel, rubber strap",
+  "price": 8900,
+  "condition": "excellent",
+  "box_papers": "box_only",
+  "category": "Sports Watches",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    16,
+    16,
+    18
+   ],
+   "bezel": [
+    30,
+    30,
+    32
+   ],
+   "strap": "rubber",
+   "strap_color": [
+    22,
+    22,
+    24
+   ],
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 124
+  },
+  "description_es": "Buceador robusto de 300 m con bisel giratorio unidireccional.\n\nPieza de 2019, en excelente estado. Se entrega con su estuche original. Caja de 42 mm: Acero, correa de caucho.",
+  "description_en": "A robust 300 m diver with a unidirectional rotating bezel.\n\nA 2019 piece, in excellent condition. Supplied with its original box. 42 mm case: Steel, rubber strap."
+ },
+ {
+  "key": "tudor-black-bay-fifty-eight-m79030n",
+  "brand": "Tudor",
+  "model": "Black Bay Fifty-Eight",
+  "reference": "M79030N",
+  "year": 2022,
+  "case_size": "39 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 3300,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Vintage Watches",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    14,
+    14,
+    16
+   ],
+   "bezel": [
+    18,
+    18,
+    20
+   ],
+   "strap": "bracelet",
+   "date": false,
+   "accent": [
+    210,
+    175,
+    100
+   ],
+   "seed": 125
+  },
+  "description_es": "Proporciones de inspiración vintage y detalles dorados sobre esfera negra.\n\nPieza de 2022, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 39 mm: Acero.",
+  "description_en": "Vintage-inspired proportions and gilt details on a black dial.\n\nA 2022 piece, in excellent condition. Supplied as a full set, with original box and papers. 39 mm case: Steel."
+ },
+ {
+  "key": "tudor-black-bay-chrono-m79360n",
+  "brand": "Tudor",
+  "model": "Black Bay Chrono",
+  "reference": "M79360N",
+  "year": 2023,
+  "case_size": "41 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 4600,
+  "condition": "mint",
+  "box_papers": "full_set",
+  "category": "Complications",
+  "render": {
+   "style": "chrono",
+   "case": "steel",
+   "dial": [
+    236,
+    234,
+    228
+   ],
+   "bezel": [
+    22,
+    22,
+    24
+   ],
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    200,
+    40,
+    40
+   ],
+   "subdials": 2,
+   "sub_color": [
+    24,
+    24,
+    26
+   ],
+   "seed": 126
+  },
+  "description_es": "Cronógrafo de manufactura con contadores negros sobre esfera opalina.\n\nPieza de 2023, sin estrenar. Se entrega completo, con estuche y documentación original. Caja de 41 mm: Acero.",
+  "description_en": "In-house chronograph with black counters on an opaline dial.\n\nA 2023 piece, unworn. Supplied as a full set, with original box and papers. 41 mm case: Steel."
+ },
+ {
+  "key": "tudor-pelagos-m25600tn",
+  "brand": "Tudor",
+  "model": "Pelagos",
+  "reference": "M25600TN",
+  "year": 2021,
+  "case_size": "42 mm",
+  "material_es": "Titanio",
+  "material_en": "Titanium",
+  "price": 4100,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "diver",
+   "case": "titanium",
+   "dial": [
+    26,
+    54,
+    110
+   ],
+   "bezel": [
+    26,
+    52,
+    108
+   ],
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    220,
+    60,
+    40
+   ],
+   "seed": 127
+  },
+  "description_es": "Buceador profesional de titanio, ligero y con válvula de helio.\n\nPieza de 2021, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 42 mm: Titanio.",
+  "description_en": "A professional titanium diver, lightweight with a helium valve.\n\nA 2021 piece, in excellent condition. Supplied as a full set, with original box and papers. 42 mm case: Titanium."
+ },
+ {
+  "key": "iwc-portugieser-chronograph-iw371605",
+  "brand": "IWC",
+  "model": "Portugieser Chronograph",
+  "reference": "IW371605",
+  "year": 2021,
+  "case_size": "41 mm",
+  "material_es": "Acero, correa de piel azul",
+  "material_en": "Steel, blue leather strap",
+  "price": 7200,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Dress Watches",
+  "render": {
+   "style": "chrono",
+   "case": "steel",
+   "dial": [
+    240,
+    238,
+    232
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    28,
+    40,
+    70
+   ],
+   "date": false,
+   "accent": [
+    40,
+    70,
+    140
+   ],
+   "subdials": 2,
+   "sub_color": [
+    232,
+    230,
+    224
+   ],
+   "seed": 128
+  },
+  "description_es": "Cronógrafo de vestir con números aplicados y esfera de gran legibilidad.\n\nPieza de 2021, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 41 mm: Acero, correa de piel azul.",
+  "description_en": "A dress chronograph with applied numerals and highly legible dial.\n\nA 2021 piece, in excellent condition. Supplied as a full set, with original box and papers. 41 mm case: Steel, blue leather strap."
+ },
+ {
+  "key": "iwc-big-pilot-iw501001",
+  "brand": "IWC",
+  "model": "Big Pilot",
+  "reference": "IW501001",
+  "year": 2020,
+  "case_size": "46,2 mm",
+  "material_es": "Acero, correa de piel",
+  "material_en": "Steel, leather strap",
+  "price": 9800,
+  "condition": "very_good",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "pilot",
+   "case": "steel",
+   "dial": [
+    18,
+    18,
+    20
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    80,
+    52,
+    30
+   ],
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 129
+  },
+  "description_es": "Gran tamaño, corona cónica y siete días de reserva de marcha.\n\nPieza de 2020, en muy buen estado. Se entrega completo, con estuche y documentación original. Caja de 46,2 mm: Acero, correa de piel.",
+  "description_en": "Large size, conical crown and a seven-day power reserve.\n\nA 2020 piece, in very good condition. Supplied as a full set, with original box and papers. 46,2 mm case: Steel, leather strap."
+ },
+ {
+  "key": "iwc-pilot-s-watch-mark-xx-iw328201",
+  "brand": "IWC",
+  "model": "Pilot's Watch Mark XX",
+  "reference": "IW328201",
+  "year": 2023,
+  "case_size": "40 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 4700,
+  "condition": "mint",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "pilot",
+   "case": "steel",
+   "dial": [
+    16,
+    16,
+    18
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 130
+  },
+  "description_es": "Instrumento de aviación de proporciones contenidas y gran confort.\n\nPieza de 2023, sin estrenar. Se entrega completo, con estuche y documentación original. Caja de 40 mm: Acero.",
+  "description_en": "An aviation instrument with restrained proportions and great comfort.\n\nA 2023 piece, unworn. Supplied as a full set, with original box and papers. 40 mm case: Steel."
+ },
+ {
+  "key": "tag-heuer-carrera-chronograph-cbn2a1b",
+  "brand": "Tag Heuer",
+  "model": "Carrera Chronograph",
+  "reference": "CBN2A1B",
+  "year": 2022,
+  "case_size": "44 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 4300,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "chrono",
+   "case": "steel",
+   "dial": [
+    20,
+    22,
+    26
+   ],
+   "bezel": [
+    24,
+    24,
+    26
+   ],
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    200,
+    40,
+    40
+   ],
+   "subdials": 3,
+   "sub_color": [
+    34,
+    36,
+    40
+   ],
+   "seed": 131
+  },
+  "description_es": "Cronógrafo de inspiración automovilística con calibre Heuer 02.\n\nPieza de 2022, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 44 mm: Acero.",
+  "description_en": "A motorsport-inspired chronograph with the Heuer 02 calibre.\n\nA 2022 piece, in excellent condition. Supplied as a full set, with original box and papers. 44 mm case: Steel."
+ },
+ {
+  "key": "tag-heuer-monaco-cbl2111",
+  "brand": "Tag Heuer",
+  "model": "Monaco",
+  "reference": "CBL2111",
+  "year": 2021,
+  "case_size": "39 mm",
+  "material_es": "Acero, correa de piel azul",
+  "material_en": "Steel, blue leather strap",
+  "price": 5100,
+  "condition": "very_good",
+  "box_papers": "full_set",
+  "category": "Limited Editions",
+  "render": {
+   "style": "square",
+   "case": "steel",
+   "dial": [
+    26,
+    58,
+    120
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    22,
+    34,
+    62
+   ],
+   "date": false,
+   "seed": 132
+  },
+  "description_es": "Caja cuadrada de culto y esfera azul sol, símbolo del motor de los setenta.\n\nPieza de 2021, en muy buen estado. Se entrega completo, con estuche y documentación original. Caja de 39 mm: Acero, correa de piel azul.",
+  "description_en": "Cult square case and blue sunburst dial, a symbol of seventies racing.\n\nA 2021 piece, in very good condition. Supplied as a full set, with original box and papers. 39 mm case: Steel, blue leather strap."
+ },
+ {
+  "key": "tag-heuer-aquaracer-professional-300-wbp201a",
+  "brand": "Tag Heuer",
+  "model": "Aquaracer Professional 300",
+  "reference": "WBP201A",
+  "year": 2022,
+  "case_size": "43 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 2400,
+  "condition": "excellent",
+  "box_papers": "box_only",
+  "category": "Sports Watches",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    22,
+    50,
+    104
+   ],
+   "bezel": [
+    24,
+    48,
+    100
+   ],
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 133
+  },
+  "description_es": "Buceador de 300 m con esfera azul y bisel de doce caras.\n\nPieza de 2022, en excelente estado. Se entrega con su estuche original. Caja de 43 mm: Acero.",
+  "description_en": "A 300 m diver with blue dial and twelve-sided bezel.\n\nA 2022 piece, in excellent condition. Supplied with its original box. 43 mm case: Steel."
+ },
+ {
+  "key": "jaeger-lecoultre-reverso-classic-medium-q2548520",
+  "brand": "Jaeger-LeCoultre",
+  "model": "Reverso Classic Medium",
+  "reference": "Q2548520",
+  "year": 2021,
+  "case_size": "40,1 x 24,4 mm",
+  "material_es": "Acero, correa de piel",
+  "material_en": "Steel, leather strap",
+  "price": 6900,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Dress Watches",
+  "render": {
+   "style": "square",
+   "case": "steel",
+   "dial": [
+    232,
+    230,
+    224
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    26,
+    26,
+    28
+   ],
+   "date": false,
+   "seed": 134
+  },
+  "description_es": "Caja reversible art déco, un clásico absoluto de la relojería de vestir.\n\nPieza de 2021, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 40,1 x 24,4 mm: Acero, correa de piel.",
+  "description_en": "A reversible art deco case, an absolute dress-watch classic.\n\nA 2021 piece, in excellent condition. Supplied as a full set, with original box and papers. 40,1 x 24,4 mm case: Steel, leather strap."
+ },
+ {
+  "key": "jaeger-lecoultre-master-ultra-thin-moon-q1368420",
+  "brand": "Jaeger-LeCoultre",
+  "model": "Master Ultra Thin Moon",
+  "reference": "Q1368420",
+  "year": 2020,
+  "case_size": "39 mm",
+  "material_es": "Acero, correa de piel",
+  "material_en": "Steel, leather strap",
+  "price": 7400,
+  "condition": "very_good",
+  "box_papers": "full_set",
+  "category": "Complications",
+  "render": {
+   "style": "dress",
+   "case": "steel",
+   "dial": [
+    214,
+    212,
+    210
+   ],
+   "bezel": null,
+   "strap": "leather",
+   "strap_color": [
+    30,
+    22,
+    18
+   ],
+   "date": true,
+   "seed": 135
+  },
+  "description_es": "Fase lunar y fecha en una caja extraplana de gran elegancia.\n\nPieza de 2020, en muy buen estado. Se entrega completo, con estuche y documentación original. Caja de 39 mm: Acero, correa de piel.",
+  "description_en": "Moon phase and date in an elegant ultra-thin case.\n\nA 2020 piece, in very good condition. Supplied as a full set, with original box and papers. 39 mm case: Steel, leather strap."
+ },
+ {
+  "key": "breitling-navitimer-b01-chronograph-43-ab0138211b1a1",
+  "brand": "Breitling",
+  "model": "Navitimer B01 Chronograph 43",
+  "reference": "AB0138211B1A1",
+  "year": 2022,
+  "case_size": "43 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 6400,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Complications",
+  "render": {
+   "style": "chrono",
+   "case": "steel",
+   "dial": [
+    18,
+    18,
+    20
+   ],
+   "bezel": [
+    200,
+    202,
+    206
+   ],
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    200,
+    40,
+    40
+   ],
+   "subdials": 3,
+   "sub_color": [
+    220,
+    218,
+    212
+   ],
+   "seed": 136
+  },
+  "description_es": "Regla de cálculo circular y calibre de manufactura B01.\n\nPieza de 2022, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 43 mm: Acero.",
+  "description_en": "Circular slide rule and in-house B01 calibre.\n\nA 2022 piece, in excellent condition. Supplied as a full set, with original box and papers. 43 mm case: Steel."
+ },
+ {
+  "key": "breitling-superocean-heritage-b20-ab2010121b1s1",
+  "brand": "Breitling",
+  "model": "Superocean Heritage B20",
+  "reference": "AB2010121B1S1",
+  "year": 2021,
+  "case_size": "42 mm",
+  "material_es": "Acero, correa de caucho",
+  "material_en": "Steel, rubber strap",
+  "price": 3900,
+  "condition": "very_good",
+  "box_papers": "box_only",
+  "category": "Vintage Watches",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    16,
+    16,
+    18
+   ],
+   "bezel": [
+    20,
+    20,
+    22
+   ],
+   "strap": "rubber",
+   "strap_color": [
+    24,
+    24,
+    26
+   ],
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 137
+  },
+  "description_es": "Estética de los años cincuenta con prestaciones de buceo actuales.\n\nPieza de 2021, en muy buen estado. Se entrega con su estuche original. Caja de 42 mm: Acero, correa de caucho.",
+  "description_en": "Fifties aesthetics with modern diving performance.\n\nA 2021 piece, in very good condition. Supplied with its original box. 42 mm case: Steel, rubber strap."
+ },
+ {
+  "key": "vacheron-constantin-overseas-self-winding-4500v-110a-b128",
+  "brand": "Vacheron Constantin",
+  "model": "Overseas Self-winding",
+  "reference": "4500V/110A-B128",
+  "year": 2021,
+  "case_size": "41 mm",
+  "material_es": "Acero",
+  "material_en": "Steel",
+  "price": 28500,
+  "condition": "excellent",
+  "box_papers": "full_set",
+  "category": "Luxury Watches",
+  "render": {
+   "style": "sport",
+   "case": "steel",
+   "dial": [
+    30,
+    52,
+    104
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    230,
+    230,
+    230
+   ],
+   "seed": 138
+  },
+  "description_es": "Deportivo de alta relojería con sistema de cambio rápido de brazalete.\n\nPieza de 2021, en excelente estado. Se entrega completo, con estuche y documentación original. Caja de 41 mm: Acero.",
+  "description_en": "A haute horlogerie sports watch with a quick-change bracelet system.\n\nA 2021 piece, in excellent condition. Supplied as a full set, with original box and papers. 41 mm case: Steel."
+ },
+ {
+  "key": "rolex-oyster-perpetual-41-124300",
+  "brand": "Rolex",
+  "model": "Oyster Perpetual 41",
+  "reference": "124300",
+  "year": 2022,
+  "case_size": "41 mm",
+  "material_es": "Acero Oystersteel",
+  "material_en": "Oystersteel",
+  "price": 9600,
+  "condition": "mint",
+  "box_papers": "full_set",
+  "category": "Dress Watches",
+  "render": {
+   "style": "dress",
+   "case": "steel",
+   "dial": [
+    150,
+    190,
+    140
+   ],
+   "bezel": null,
+   "strap": "bracelet",
+   "date": false,
+   "seed": 139
+  },
+  "description_es": "La esencia de Rolex en su forma más pura, con una esfera de color vibrante.\n\nPieza de 2022, sin estrenar. Se entrega completo, con estuche y documentación original. Caja de 41 mm: Acero Oystersteel.",
+  "description_en": "The essence of Rolex in its purest form, with a vibrant dial.\n\nA 2022 piece, unworn. Supplied as a full set, with original box and papers. 41 mm case: Oystersteel."
+ },
+ {
+  "key": "omega-seamaster-planet-ocean-600m-215-30-44-21-01-001",
+  "brand": "Omega",
+  "model": "Seamaster Planet Ocean 600M",
+  "reference": "215.30.44.21.01.001",
+  "year": 2020,
+  "case_size": "43,5 mm",
+  "material_es": "Acero, bisel cerámico negro",
+  "material_en": "Steel, black ceramic bezel",
+  "price": 5900,
+  "condition": "very_good",
+  "box_papers": "full_set",
+  "category": "Sports Watches",
+  "render": {
+   "style": "diver",
+   "case": "steel",
+   "dial": [
+    18,
+    18,
+    20
+   ],
+   "bezel": [
+    22,
+    22,
+    24
+   ],
+   "strap": "bracelet",
+   "date": true,
+   "accent": [
+    220,
+    90,
+    40
+   ],
+   "seed": 140
+  },
+  "description_es": "Buceador de 600 m con detalles naranjas y movimiento antimagnético.\n\nPieza de 2020, en muy buen estado. Se entrega completo, con estuche y documentación original. Caja de 43,5 mm: Acero, bisel cerámico negro.",
+  "description_en": "A 600 m diver with orange accents and antimagnetic movement.\n\nA 2020 piece, in very good condition. Supplied as a full set, with original box and papers. 43,5 mm case: Steel, black ceramic bezel."
+ }
+]
