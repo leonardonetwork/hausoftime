@@ -123,9 +123,7 @@ class WatchEvaluationController extends Controller
     private function evaluateWithAI(array $data, string $locale): array
     {
         try {
-            $key   = Setting::get('openai_key');
-            $model = Setting::get('openai_model', 'gpt-4o');
-            if (!$key) return ['error' => 'No API key'];
+            if (!\App\Services\AiClient::available()) return ['error' => 'No API key'];
 
             $lang = $locale === 'es' ? 'Spanish' : 'English';
             $prompt = "You are a luxury watch market expert. Evaluate this watch and respond ONLY with valid JSON.
@@ -148,15 +146,7 @@ Respond in {$lang} with this exact JSON:
   \"confidence\": \"high|medium|low\"
 }";
 
-            $response = Http::withToken($key)->timeout(45)->post('https://api.openai.com/v1/chat/completions', [
-                'model'       => $model,
-                'messages'    => [['role' => 'user', 'content' => $prompt]],
-                'max_tokens'  => 800,
-                'temperature' => 0.3,
-            ]);
-
-            $content = preg_replace('/```json|```/', '', $response->json('choices.0.message.content', ''));
-            return json_decode(trim($content), true) ?? ['error' => 'Parse error'];
+            return \App\Services\AiClient::askJson($prompt, 800, 90) ?? ['error' => 'Parse error'];
 
         } catch (\Exception $e) {
             Log::error('AI evaluation failed: ' . $e->getMessage());

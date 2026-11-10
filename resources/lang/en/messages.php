@@ -207,6 +207,7 @@ return [
         'doc_files_hint'    => 'Upload certificates, invoices or relevant documentation. Max 5 PDF files.',
         'submit_watch'      => 'Submit for review',
         'watch_submitted'   => 'Your watch has been submitted for review. We will notify you by email.',
+        'watch_published'   => 'Your watch is now published on Haus of Time.',
         'watch_updated'     => 'Watch updated and submitted for review.',
         'cannot_edit_watch' => 'You can only edit watches in draft or rejected status.',
         'contacts_title'    => 'My contact details',

@@ -216,6 +216,7 @@ return [
         'doc_files_hint'    => 'Sube los certificados, facturas o documentación relevante. Máx. 5 archivos PDF.',
         'submit_watch'      => 'Enviar a revisión',
         'watch_submitted'   => 'Tu reloj ha sido enviado a revisión. Te notificaremos por email.',
+        'watch_published'   => 'Tu reloj ya está publicado en Haus of Time.',
         'watch_updated'     => 'Reloj actualizado y enviado a revisión.',
         'cannot_edit_watch' => 'Solo puedes editar relojes en estado borrador o rechazado.',
         // Contacts

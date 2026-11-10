@@ -203,4 +203,14 @@ class Watch extends Model
             default       => $en ? 'Watch only' : 'Solo reloj',
         };
     }
+
+    /** Ajustes › Tienda: ¿se publica sin revisión al enviar la verificación? */
+    public static function autoApproveOnSubmit(): bool
+    {
+        return match (Setting::get('watch_approval_mode', 'manual')) {
+            'auto'              => true,
+            'auto_early_access' => Setting::get('site_mode', 'early_access') !== 'live',
+            default             => false,
+        };
+    }
 }

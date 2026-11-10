@@ -29,7 +29,7 @@ class SettingsController extends Controller
             }
         }
         $shop = [];
-        foreach (['ship_within_days' => 2, 'release_after_days' => 30, 'reservation_minutes' => 30, 'orders_email' => ''] as $k => $d) {
+        foreach (['ship_within_days' => 2, 'release_after_days' => 30, 'reservation_minutes' => 30, 'orders_email' => '', 'watch_approval_mode' => 'manual'] as $k => $d) {
             $shop[$k] = Setting::get($k, $d);
         }
         return view('admin.settings.index', compact('mail', 'ai', 'gen', 'launch', 'pay', 'shop'));
@@ -122,6 +122,7 @@ class SettingsController extends Controller
             'release_after_days'  => 'required|integer|min:1|max:90',
             'reservation_minutes' => 'required|integer|min:30|max:240',
             'orders_email'        => 'nullable|email',
+            'watch_approval_mode' => ['required', Rule::in(['auto', 'manual', 'auto_early_access'])],
         ]);
         foreach ($data as $k => $v) {
             Setting::set($k, (string) ($v ?? ''), 'shop');
@@ -177,15 +178,15 @@ class SettingsController extends Controller
         $validated = $request->validate([
             'ai_provider'     => ['required', Rule::in(['openai', 'anthropic'])],
             'openai_key'      => 'nullable|string',
-            'openai_model'    => 'nullable|string',
+            'openai_model'    => ['nullable', Rule::in(array_keys(\App\Services\AiClient::OPENAI_MODELS))],
             'anthropic_key'   => 'nullable|string',
-            'anthropic_model' => 'nullable|string',
+            'anthropic_model' => ['nullable', Rule::in(array_keys(\App\Services\AiClient::ANTHROPIC_MODELS))],
         ]);
 
         // Always save provider and models
         Setting::set('ai_provider',     $validated['ai_provider'],     'ai', 'string');
-        Setting::set('openai_model',    $validated['openai_model'] ?? 'gpt-4o', 'ai', 'string');
-        Setting::set('anthropic_model', $validated['anthropic_model'] ?? 'claude-sonnet-4-6', 'ai', 'string');
+        Setting::set('openai_model',    $validated['openai_model'] ?? \App\Services\AiClient::DEFAULT_OPENAI, 'ai', 'string');
+        Setting::set('anthropic_model', $validated['anthropic_model'] ?? \App\Services\AiClient::DEFAULT_ANTHROPIC, 'ai', 'string');
 
         // Only update keys if provided (not empty)
         if (!empty($validated['openai_key'])) {

@@ -86,33 +86,13 @@ class PagesController extends Controller
     }
 
     private function aiTranslate(string $text, string $toLang): string {
-        try {
-            $key = Setting::get('openai_key');
-            if (!$key) return '';
-            $lang = $toLang === 'en' ? 'English' : 'Spanish';
-            $r = Http::withToken($key)->timeout(20)->post('https://api.openai.com/v1/chat/completions', [
-                'model'    => Setting::get('openai_model', 'gpt-4o'),
-                'messages' => [['role'=>'user','content'=>"Translate to {$lang}. Return ONLY the translation: \"{$text}\""]],
-                'max_tokens' => 300, 'temperature' => 0.2,
-            ]);
-            return trim($r->json('choices.0.message.content', ''));
-        } catch (\Exception) { return ''; }
+        $lang = $toLang === 'en' ? 'English' : 'Spanish (Spain)';
+        return \App\Services\AiClient::stripQuotes(\App\Services\AiClient::ask("Translate to {$lang}. Return ONLY the translation: \"{$text}\"", 300, 40));
     }
 
     private function aiTranslateHtml(string $html, string $toLang): string {
-        try {
-            $key = Setting::get('openai_key');
-            if (!$key) return '';
-            $lang = $toLang === 'en' ? 'English' : 'Spanish';
-            $r = Http::withToken($key)->timeout(60)->post('https://api.openai.com/v1/chat/completions', [
-                'model'    => Setting::get('openai_model', 'gpt-4o'),
-                'messages' => [[
-                    'role'    => 'user',
-                    'content' => "Translate the following HTML content to {$lang}. Keep all HTML tags intact, translate only the text content. Return ONLY the translated HTML:\n\n{$html}"
-                ]],
-                'max_tokens' => 4000, 'temperature' => 0.2,
-            ]);
-            return trim($r->json('choices.0.message.content', ''));
-        } catch (\Exception) { return ''; }
+        $lang = $toLang === 'en' ? 'English' : 'Spanish (Spain)';
+        $out = \App\Services\AiClient::ask("Translate the following HTML content to {$lang}. Keep all HTML tags intact, translate only the text content. Return ONLY the translated HTML:\n\n{$html}", 4000, 180);
+        return trim(preg_replace('/^```(?:html)?\s*|\s*```$/', '', $out));
     }
 }

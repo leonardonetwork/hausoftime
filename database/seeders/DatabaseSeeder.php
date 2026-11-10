@@ -49,9 +49,9 @@ class DatabaseSeeder extends Seeder
             // AI
             ['key' => 'ai_provider',         'value' => 'openai',                         'group' => 'ai',         'type' => 'string'],
             ['key' => 'openai_key',          'value' => '',                               'group' => 'ai',         'type' => 'encrypted'],
-            ['key' => 'openai_model',        'value' => 'gpt-4o',                         'group' => 'ai',         'type' => 'string'],
+            ['key' => 'openai_model',        'value' => 'gpt-6.1-sol',                    'group' => 'ai',         'type' => 'string'],
             ['key' => 'anthropic_key',       'value' => '',                               'group' => 'ai',         'type' => 'encrypted'],
-            ['key' => 'anthropic_model',     'value' => 'claude-sonnet-4-6',             'group' => 'ai',         'type' => 'string'],
+            ['key' => 'anthropic_model',     'value' => 'claude-opus-5-5',               'group' => 'ai',         'type' => 'string'],
         ];
 
         foreach ($defaults as $setting) {

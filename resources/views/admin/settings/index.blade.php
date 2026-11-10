@@ -200,8 +200,8 @@
         <div class="form-group">
           <label class="form-label">Modelo</label>
           <select name="openai_model" class="form-control form-control--select">
-            @foreach(['gpt-4o'=>'GPT-4o (Recomendado)','gpt-4-turbo'=>'GPT-4 Turbo','gpt-4'=>'GPT-4','gpt-3.5-turbo'=>'GPT-3.5 Turbo'] as $v=>$l)
-              <option value="{{ $v }}" {{ ($ai['openai_model'] ?? 'gpt-4o') === $v ? 'selected':'' }}>{{ $l }}</option>
+            @foreach(\App\Services\AiClient::OPENAI_MODELS as $v=>$l)
+              <option value="{{ $v }}" {{ ($ai['openai_model'] ?? \App\Services\AiClient::DEFAULT_OPENAI) === $v ? 'selected':'' }}>{{ $l }}</option>
             @endforeach
           </select>
         </div>
@@ -219,8 +219,8 @@
         <div class="form-group">
           <label class="form-label">Modelo</label>
           <select name="anthropic_model" class="form-control form-control--select">
-            @foreach(['claude-sonnet-4-6'=>'Claude Sonnet 4.6 (Recomendado)','claude-opus-4-6'=>'Claude Opus 4.6','claude-haiku-4-5-20251001'=>'Claude Haiku 4.5'] as $v=>$l)
-              <option value="{{ $v }}" {{ ($ai['anthropic_model'] ?? 'claude-sonnet-4-6') === $v ? 'selected':'' }}>{{ $l }}</option>
+            @foreach(\App\Services\AiClient::ANTHROPIC_MODELS as $v=>$l)
+              <option value="{{ $v }}" {{ ($ai['anthropic_model'] ?? \App\Services\AiClient::DEFAULT_ANTHROPIC) === $v ? 'selected':'' }}>{{ $l }}</option>
             @endforeach
           </select>
         </div>
@@ -421,6 +421,19 @@
       <div class="form-row">
         <div class="form-group"><label class="form-label">Reserva durante el pago (minutos)</label><input type="number" name="reservation_minutes" class="form-control" min="30" max="240" value="{{ $shop['reservation_minutes'] }}" required></div>
         <div class="form-group"><label class="form-label">Email avisos de pedidos</label><input type="email" name="orders_email" class="form-control" value="{{ $shop['orders_email'] }}" placeholder="Por defecto: email de contacto"></div>
+      </div>
+      <div class="form-group" style="margin-top:8px">
+        <label class="form-label">Aprobación de relojes publicados por vendedores</label>
+        <div class="radio-group" style="display:grid;grid-template-columns:1fr;gap:10px">
+          @foreach([
+            'auto'              => ['Aprobados por defecto', 'Se publican al instante tras la foto de verificación, en Early Access y en Live.'],
+            'manual'            => ['Todos requieren aprobación', 'Cada reloj queda pendiente hasta que lo apruebes desde Productos.'],
+            'auto_early_access' => ['Aprobados solo en Early Access', 'Publicación instantánea mientras el sitio está en Early Access; en Live requieren aprobación.'],
+          ] as $v => [$l, $d])
+          <label class="radio-card {{ $shop['watch_approval_mode'] === $v ? 'selected' : '' }}"><input type="radio" name="watch_approval_mode" value="{{ $v }}" @checked($shop['watch_approval_mode'] === $v)><div class="radio-card__dot"></div><div><div class="radio-card__label">{{ $l }}</div><div style="font-size:.75rem;color:var(--a-muted)">{{ $d }}</div></div></label>
+          @endforeach
+        </div>
+        <p style="font-size:11px;color:var(--a-subtle);margin-top:8px">Un reloj rechazado y luego modificado vuelve siempre a revisión.</p>
       </div>
       <p style="font-size:11px;color:var(--a-subtle);margin-bottom:16px">Las comisiones (estándar / founding) se configuran en la pestaña General.</p>
       <button type="submit" class="btn btn--primary">Guardar</button>

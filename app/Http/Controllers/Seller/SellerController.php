@@ -162,14 +162,18 @@ class SellerController extends Controller
 
         $path = $request->file('verification_photo')->store('watches/verification', 'public');
 
+        $auto = Watch::autoApproveOnSubmit();
         $watch->update([
             'verification_photo' => $path,
             'verification_at'    => now(),
-            'status'             => 'pending',
+            'status'             => $auto ? 'approved' : 'pending',
+            'approved_at'        => $auto ? now() : null,
+            // la foto di verifica del possesso dà diritto al sigillo "certified"
+            'is_certified'       => $auto ? true : $watch->is_certified,
         ]);
 
         return redirect()->route('seller.watches')
-            ->with('success', __('messages.seller.watch_submitted'));
+            ->with('success', __($auto ? 'messages.seller.watch_published' : 'messages.seller.watch_submitted'));
     }
 
     public function watchEdit(Watch $watch)

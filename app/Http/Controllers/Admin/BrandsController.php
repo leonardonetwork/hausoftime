@@ -42,12 +42,7 @@ class BrandsController extends Controller
         return back()->with('success','Marca eliminada.');
     }
     public static function aiTranslate(string $text, string $toLang): string {
-        try {
-            $key=Setting::get('openai_key'); $model=Setting::get('openai_model','gpt-4o');
-            if(!$key) return '';
-            $lang=$toLang==='en'?'English':'Spanish';
-            $r=Http::withToken($key)->timeout(15)->post('https://api.openai.com/v1/chat/completions',['model'=>$model,'messages'=>[['role'=>'user','content'=>"Translate this watch brand/category name to {$lang}. Return ONLY the translation: \"{$text}\""]],'max_tokens'=>60,'temperature'=>0.1]);
-            return trim($r->json('choices.0.message.content',''));
-        } catch(\Exception) { return ''; }
+        $lang=$toLang==='en'?'English':'Spanish (Spain)';
+        return \App\Services\AiClient::stripQuotes(\App\Services\AiClient::ask("Translate this watch brand/category name to {$lang}. Return ONLY the translation: \"{$text}\"", 60, 30));
     }
 }
