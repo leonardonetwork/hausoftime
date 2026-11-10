@@ -161,7 +161,8 @@ attiva)
 
   # Cron dello scheduler Laravel
   CRON="* * * * * cd $APP && $PHP artisan schedule:run >> /dev/null 2>&1"
-  ( crontab -u "$USER_NAME" -l 2>/dev/null | grep -v 'artisan schedule:run' ; echo "$CRON" ) | crontab -u "$USER_NAME" -
+  CUR=$(crontab -u "$USER_NAME" -l 2>/dev/null | grep -v 'artisan schedule:run' || true)
+  printf '%s\n%s\n' "$CUR" "$CRON" | sed '/^$/d' | crontab -u "$USER_NAME" -
   ok "Cron: $CRON"
 
   sudo -u "$USER_NAME" -H bash -c "cd $APP && $PHP artisan optimize -q"
@@ -188,7 +189,8 @@ rollback)
   mv "$OLD" "$APP"
   cpapi2 --user="$USER_NAME" SubDomain changedocroot subdomain=ea rootdomain=hausoftime.com dir=public_html/ea.hausoftime.com >/dev/null 2>&1 || \
     echo "⚠ Ripristina a mano la document root di ea.hausoftime.com = public_html/ea.hausoftime.com"
-  crontab -u "$USER_NAME" -l 2>/dev/null | grep -v 'artisan schedule:run' | crontab -u "$USER_NAME" - || true
+  CUR=$(crontab -u "$USER_NAME" -l 2>/dev/null | grep -v 'artisan schedule:run' || true)
+  printf '%s\n' "$CUR" | sed '/^$/d' | crontab -u "$USER_NAME" - || true
   echo "⚠ Il database contiene le nuove tabelle del negozio: non danno fastidio alla versione precedente."
   ok "Ripristinata la situazione precedente"
   ;;
