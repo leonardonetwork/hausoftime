@@ -153,11 +153,17 @@ attiva)
   ok "public_html attivo (precedente in $OLD)"
 
   # ea.hausoftime.com: document root = public_html (l'app lo reindirizza al dominio principale)
-  if cpapi2 --user="$USER_NAME" SubDomain changedocroot subdomain=ea rootdomain=hausoftime.com dir=public_html 2>/dev/null | grep -q "status: 1"; then
+  cpapi2 --user="$USER_NAME" SubDomain changedocroot subdomain=ea rootdomain=hausoftime.com dir=public_html >/dev/null 2>&1 || true
+  if grep -q "documentroot: $APP\$" "/var/cpanel/userdata/$USER_NAME/ea.hausoftime.com" 2>/dev/null; then
     ok "Sottodominio ea.hausoftime.com → public_html"
   else
     echo "⚠ Cambia a mano: cPanel › Domini › ea.hausoftime.com › Document root = public_html"
   fi
+
+  # PHP: handler cPanel ea-php83 e PHP Selector di CloudLinux su "native" (altrimenti alt-php sovrascrive l'handler)
+  whmapi1 php_set_vhost_versions version=ea-php83 vhost=hausoftime.com vhost=ea.hausoftime.com >/dev/null 2>&1 || true
+  command -v selectorctl >/dev/null && selectorctl --set-user-current=native --user="$USER_NAME" >/dev/null 2>&1 || true
+  ok "PHP del sito: ea-php83 (selector: $(selectorctl --user-current --user="$USER_NAME" 2>/dev/null | awk '{print $1}'))"
 
   # Cron dello scheduler Laravel
   CRON="* * * * * cd $APP && $PHP artisan schedule:run >> /dev/null 2>&1"
