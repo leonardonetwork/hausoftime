@@ -1,0 +1,13 @@
+# HAUS OF TIME — l'app vive in public_html, la document root effettiva è public/
+Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    # Validazione SSL (AutoSSL / Let's Encrypt)
+    RewriteRule ^\.well-known/ - [L]
+    # Nessun file di progetto è raggiungibile: tutto passa da public/
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L,QSA]
+</IfModule>
+<FilesMatch "^\.(env|git)">
+    Require all denied
+</FilesMatch>
