@@ -54,6 +54,7 @@ class SettingsController extends Controller
             if (!filter_var($e, FILTER_VALIDATE_EMAIL)) return back()->with('error', "Email no válido: {$e}")->with('settings_tab', 'launch');
         }
         Setting::set('site_mode', $data['site_mode'], 'launch');
+        $request->session()->forget('hot_view_mode');
         Setting::set('live_whitelist_emails', implode("\n", $emails), 'launch');
         Setting::set('live_whitelist_ips', implode("\n", \App\Services\SiteMode::lines($data['live_whitelist_ips'] ?? '')), 'launch');
         return back()->with('success', $data['site_mode'] === 'live' ? 'El sitio está ahora en modo LIVE.' : 'El sitio está en modo Early Access.')->with('settings_tab', 'launch');

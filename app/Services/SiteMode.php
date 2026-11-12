@@ -75,10 +75,8 @@ class SiteMode
     {
         $pref = $this->request->hasSession() ? $this->request->session()->get('hot_view_mode') : null;
 
-        if ($this->isLive()) {
-            // Solo chi ha accesso privilegiato può tornare a vedere la landing early access.
-            return !($pref === 'early_access' && $this->isPrivileged());
-        }
+        // In live la home è sempre il marketplace, per tutti (la landing resta su /vender).
+        if ($this->isLive()) return true;
         if (!$this->isPrivileged()) return false;
 
         $user = $this->request->user();
