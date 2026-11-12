@@ -5,13 +5,13 @@
   $priceFmt = fn ($v) => \App\Models\Watch::display($v);
   $pick = $featured->take(8);
 @endphp
-@section('title', 'HAUS OF TIME — ' . $t('La Galería', 'The Gallery'))
+@section('title', 'HAUS OF TIME — ' . $t('Marketplace de relojes de lujo', 'Luxury watch marketplace'))
+@section('canonical', route('home'))
 @section('body_class', 'hx hx--galeria')
 @push('head')
-  <meta name="robots" content="noindex, nofollow">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="/images/shop/alt/salon.webp" type="image/webp">
-  <link rel="stylesheet" href="/css/home-alt.css?v={{ filemtime(public_path('css/home-alt.css')) }}">
+  <link rel="stylesheet" href="/css/home.css?v={{ filemtime(public_path('css/home.css')) }}">
 @endpush
 
 @section('content')

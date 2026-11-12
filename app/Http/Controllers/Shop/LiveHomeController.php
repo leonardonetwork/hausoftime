@@ -7,10 +7,10 @@ use App\Models\Watch;
 use App\Models\WatchBrand;
 use App\Models\WatchCategory;
 
-/** Home alternative da mostrare al cliente: /home-2 (Galería) e /home-3 (Editorial). */
-class AltHomeController extends Controller
+/** Home del sito live (scelta dal cliente: ex /home-2 «La Galería»). Il catalogo è su /relojes. */
+class LiveHomeController extends Controller
 {
-    public function show(int $variant)
+    public function index()
     {
         $published = Watch::published()->get();
 
@@ -40,7 +40,7 @@ class AltHomeController extends Controller
             if ($b->name_en) $brandMap[$b->name_en] = $b;
         }
 
-        return view("shop.home-{$variant}", [
+        return view('shop.home', [
             'brands'      => $brands,
             'categories'  => $categories,
             'featured'    => $featured,

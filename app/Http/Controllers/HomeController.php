@@ -15,7 +15,9 @@ class HomeController extends Controller
     public function index(Request $request, SiteMode $mode)
     {
         if ($mode->showsLive()) {
-            return app(ShopController::class)->index($request);
+            // vecchi link al catalogo in home (/?marca=…, /?orden=…): mostra ancora il catalogo
+            if ($request->query()) return app(ShopController::class)->index($request);
+            return app(\App\Http\Controllers\Shop\LiveHomeController::class)->index();
         }
         return view('pages.home');
     }
