@@ -25,6 +25,8 @@ class HomeController extends Controller
     /** La landing Founding Sellers resta disponibile su /vender anche a sito live. */
     public function sell()
     {
+        // stessa pagina dell'Early Access; a sito live la versione con la grafica del negozio
+        if (\App\Support\Look::live()) return view('shop.sell');
         return view('pages.home');
     }
 

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends(\App\Support\Look::layout('layouts.app'))
 @section('title', app()->getLocale() === 'es' ? 'Baja confirmada' : 'Unsubscribed')
 @section('content')
 <div class="page-hero" style="min-height:70vh;display:flex;align-items:center;">

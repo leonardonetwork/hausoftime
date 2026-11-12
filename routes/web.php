@@ -100,6 +100,7 @@ Route::prefix('admin')->name('admin.')->middleware(['auth', 'admin'])->group(fun
     // Products / Watches
     Route::prefix('productos')->name('watches.')->group(function () {
         Route::get('/',                       [AdminWatchesController::class, 'index'])->name('index');
+        Route::get('/{watch}/revision',       [AdminWatchesController::class, 'review'])->name('review');
         Route::get('/{watch}',                [AdminWatchesController::class, 'show'])->name('show');
         Route::get('/{watch}/editar',         [AdminWatchesController::class, 'edit'])->name('edit');
         Route::put('/{watch}',                [AdminWatchesController::class, 'update'])->name('update');

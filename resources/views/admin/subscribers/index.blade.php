@@ -81,18 +81,7 @@
         </td>
         <td style="font-size:.8rem;color:var(--text-muted);">{{ $r->created_at->format('d/m/Y') }}</td>
         <td>
-          @if($r->status === 'pending')
-          <div style="display:flex;gap:6px;flex-wrap:wrap;">
-            <form method="POST" action="{{ route('admin.subscribers.approve', $r) }}">
-              @csrf
-              <button type="submit" class="btn btn--success btn--sm" title="Aprobar">✓</button>
-            </form>
-            <form method="POST" action="{{ route('admin.subscribers.reject', $r) }}">
-              @csrf
-              <button type="submit" class="btn btn--danger btn--sm" title="Rechazar">✕</button>
-            </form>
-          </div>
-          @elseif($r->user_id)
+          @if($r->user_id)
             <a href="#" class="btn btn--ghost btn--sm" style="font-size:.72rem;">Ver cuenta</a>
           @endif
         </td>

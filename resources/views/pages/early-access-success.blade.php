@@ -1,7 +1,7 @@
 {{-- ============================================================
      resources/views/pages/early-access-success.blade.php
 ============================================================ --}}
-@extends('layouts.app')
+@extends(\App\Support\Look::layout('layouts.app'))
 @section('title', __('messages.early_access.success_title'))
 @section('content')
 <div class="page-hero" style="min-height:80vh;display:flex;align-items:center;">

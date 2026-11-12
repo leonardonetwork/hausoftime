@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends(\App\Support\Look::layout('layouts.app'))
 @section('title', __('messages.evaluation.result_title'))
 
 @section('content')

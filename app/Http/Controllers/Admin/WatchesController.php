@@ -26,13 +26,23 @@ class WatchesController extends Controller
         }
 
         $watches = $query->paginate(20)->withQueryString();
-        return view('admin.products.index', compact('watches'));
+        $pendingIds = Watch::where('status', 'pending')->orderBy('verification_at')->orderBy('id')->pluck('id');
+        return view('admin.products.index', compact('watches', 'pendingIds'));
     }
 
     public function show(Watch $watch)
     {
         $watch->load('seller');
         return view('admin.products.show', compact('watch'));
+    }
+
+    /** Scheda di revisione rapida (frammento HTML per il popup dell'elenco). */
+    public function review(Watch $watch)
+    {
+        $watch->load('seller');
+        $next = Watch::where('status', 'pending')->where('id', '!=', $watch->id)
+            ->orderBy('verification_at')->orderBy('id')->value('id');
+        return view('admin.products.review', compact('watch', 'next'));
     }
 
     public function edit(Watch $watch)
@@ -149,6 +159,7 @@ class WatchesController extends Controller
         } catch (\Throwable $e) {
             \Log::error('WatchApprovedMail: ' . $e->getMessage());
         }
+        if (request()->expectsJson()) return $this->reviewJson($watch);
         return back()->with('success', __('messages.admin.watch_approved'));
     }
 
@@ -161,7 +172,20 @@ class WatchesController extends Controller
         } catch (\Throwable $e) {
             \Log::error('WatchRejectedMail: ' . $e->getMessage());
         }
+        if ($request->expectsJson()) return $this->reviewJson($watch);
         return back()->with('success', __('messages.admin.watch_rejected'));
+    }
+
+    private function reviewJson(Watch $watch)
+    {
+        $watch->refresh();
+        return response()->json([
+            'id'      => $watch->id,
+            'status'  => $watch->status,
+            'badge'   => $watch->status_badge,
+            'pending' => Watch::where('status', 'pending')->count(),
+            'next'    => Watch::where('status', 'pending')->orderBy('verification_at')->orderBy('id')->value('id'),
+        ]);
     }
 
     public function destroy(Watch $watch)

@@ -1,5 +1,5 @@
 {{-- resources/views/pages/terms.blade.php --}}
-@extends('layouts.app')
+@extends(\App\Support\Look::layout('layouts.app'))
 @section('title', __('messages.footer.terms'))
 @section('content')
 <div class="page-hero"><div class="container">

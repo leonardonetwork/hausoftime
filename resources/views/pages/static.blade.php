@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends(\App\Support\Look::layout('layouts.app'))
 @section('title', $page->title)
 
 @section('content')

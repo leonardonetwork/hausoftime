@@ -1,4 +1,4 @@
-@extends('layouts.auth')
+@extends(\App\Support\Look::layout('layouts.auth'))
 @section('title', app()->getLocale() === 'es' ? 'Iniciar sesión — Haus of Time' : 'Login — Haus of Time')
 
 
@@ -74,7 +74,7 @@
             {{ app()->getLocale() === 'es' ? '¿No tienes cuenta?' : "Don't have an account?" }}
             <a href="{{ route('early-access.index') }}"
                style="color:var(--light-text);font-weight:400;text-decoration:underline;text-underline-offset:3px;margin-left:4px;">
-              {{ app()->getLocale() === 'es' ? 'Solicitar acceso anticipado →' : 'Request early access →' }}
+              {{ \App\Support\Look::t(app()->getLocale() === 'es' ? 'Solicitar acceso anticipado →' : 'Request early access →', app()->getLocale() === 'es' ? 'Crea tu cuenta de vendedor →' : 'Create a seller account →') }}
             </a>
           </p>
         </div>

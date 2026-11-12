@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends(\App\Support\Look::layout('layouts.app'))
 @section('title', app()->getLocale() === 'es' ? 'Acceso Anticipado — Haus of Time' : 'Early Access — Haus of Time')
 
 @section('content')
@@ -6,9 +6,9 @@
 {{-- Hero compatto --}}
 <div class="page-hero" style="min-height:auto;padding:120px 60px 56px;">
   <div style="max-width:900px;margin:0 auto;width:100%;">
-    <div class="page-hero__label">Early Access</div>
+    <div class="page-hero__label">{{ \App\Support\Look::t('Early Access', app()->getLocale() === 'es' ? 'Vende tu reloj' : 'Sell your watch') }}</div>
     <h1 class="page-hero__title" style="font-size:clamp(28px,3.5vw,48px);">
-      {{ app()->getLocale() === 'es' ? 'Solicitar Acceso Anticipado' : 'Request Early Access' }}
+      {{ \App\Support\Look::t(app()->getLocale() === 'es' ? 'Solicitar Acceso Anticipado' : 'Request Early Access', app()->getLocale() === 'es' ? 'Crea tu cuenta de vendedor' : 'Create your seller account') }}
     </h1>
     <p class="page-hero__desc">
       {{ app()->getLocale() === 'es'

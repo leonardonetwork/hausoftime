@@ -1,4 +1,4 @@
-@extends('layouts.auth')
+@extends(\App\Support\Look::layout('layouts.auth'))
 @section('title', app()->getLocale() === 'es' ? 'Nueva contraseña — Haus of Time' : 'New Password — Haus of Time')
 
 

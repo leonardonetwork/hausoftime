@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends(\App\Support\Look::layout('layouts.app'))
 @section('title', app()->getLocale() === 'es' ? 'Contacto — Haus of Time' : 'Contact — Haus of Time')
 
 @section('content')

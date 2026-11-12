@@ -1,5 +1,5 @@
 {{-- resources/views/pages/privacy.blade.php --}}
-@extends('layouts.app')
+@extends(\App\Support\Look::layout('layouts.app'))
 @section('title', __('messages.footer.privacy'))
 @section('content')
 <div class="page-hero"><div class="container">

@@ -11,9 +11,7 @@
 
 <div class="tabs">
   <a href="{{ route('admin.sellers.index') }}" class="tab {{ !request('status') ? 'active':'' }}">Todos ({{ $counts['all'] }})</a>
-  <a href="{{ route('admin.sellers.index') }}?status=pending"  class="tab {{ request('status')==='pending'  ? 'active':'' }}">Pendientes ({{ $counts['pending'] }})</a>
-  <a href="{{ route('admin.sellers.index') }}?status=approved" class="tab {{ request('status')==='approved' ? 'active':'' }}">Aprobados ({{ $counts['approved'] }})</a>
-  <a href="{{ route('admin.sellers.index') }}?status=rejected" class="tab {{ request('status')==='rejected' ? 'active':'' }}">Rechazados ({{ $counts['rejected'] }})</a>
+  @if($counts['rejected'])<a href="{{ route('admin.sellers.index') }}?status=rejected" class="tab {{ request('status')==='rejected' ? 'active':'' }}">Rechazados ({{ $counts['rejected'] }})</a>@endif
 </div>
 
 <form method="GET" class="filter-bar" style="margin-bottom:20px;">
@@ -53,8 +51,8 @@
         <td style="font-size:11px;color:var(--a-subtle)">{{ $s->created_at->format('d/m/Y') }}</td>
         <td>
           <div style="display:flex;gap:6px">
-            @if($s->status !== 'approved')
-            <form method="POST" action="{{ route('admin.sellers.approve',$s) }}">@csrf<button type="submit" class="btn btn--success btn--sm">✓</button></form>
+            @if($s->status === 'rejected')
+            <form method="POST" action="{{ route('admin.sellers.approve',$s) }}">@csrf<button type="submit" class="btn btn--ghost btn--sm" title="Reactivar">↺</button></form>
             @endif
             @if($s->status !== 'rejected')
             <form method="POST" action="{{ route('admin.sellers.reject',$s) }}">@csrf<button type="submit" class="btn btn--ghost btn--sm" style="color:var(--a-danger);border-color:var(--a-danger)" onclick="return confirm('¿Rechazar?')">✕</button></form>

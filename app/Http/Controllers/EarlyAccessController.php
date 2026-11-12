@@ -118,7 +118,9 @@ class EarlyAccessController extends Controller
             'watch_count'  => $validated['watch_count'] ?? null,
             'ip_address'   => $request->ip(),
             'locale'       => app()->getLocale(),
-            'status'       => 'pending',
+            // niente approvazione dell'utente: si approvano solo i relojes
+            'status'       => 'approved',
+            'approved_at'  => now(),
         ]);
 
         // Subscribe to seller list

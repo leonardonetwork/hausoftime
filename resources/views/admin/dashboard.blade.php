@@ -54,7 +54,6 @@
   <div class="stat-card">
     <div class="stat-card__num">{{ $stats['sellers'] }}</div>
     <div class="stat-card__label">{{ __('messages.admin.total_sellers') }}</div>
-    @if($stats['pending_sellers'])<div style="font-size:.75rem;color:var(--warning);margin-top:4px;">{{ $stats['pending_sellers'] }} {{ __('messages.admin.pending_sellers') }}</div>@endif
   </div>
   <div class="stat-card">
     <div class="stat-card__num">{{ $stats['watches'] }}</div>

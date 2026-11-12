@@ -33,6 +33,7 @@
   <link rel="preload" as="image" href="/images/shop/gallery.webp" type="image/webp">
   <link rel="stylesheet" href="/css/shop.css?v={{ filemtime(public_path('css/shop.css')) }}">
   @stack('head')
+  @stack('styles')
 </head>
 <body class="hs @yield('body_class')">
   <div class="hs-bg" aria-hidden="true"></div>
