@@ -70,6 +70,12 @@
           <button type="button" class="hs-heart {{ $isFav ? 'on' : '' }}" data-fav="{{ route('favorites.toggle', $watch) }}" aria-pressed="{{ $isFav ? 'true' : 'false' }}" aria-label="{{ $isFav ? __('shop.card.unfavorite') : __('shop.card.favorite') }}">
             <svg viewBox="0 0 28 26"><path d="M14 24.2S2.6 17.4 1.6 9.7C.9 4.6 4.4 1.5 8 1.5c2.6 0 4.6 1.5 6 3.6 1.4-2.1 3.4-3.6 6-3.6 3.6 0 7.1 3.1 6.4 8.2-1 7.7-12.4 14.5-12.4 14.5z"/></svg>
           </button>
+          @unless($preview)
+          @php $isCmp = in_array($watch->id, \App\Http\Controllers\Shop\CompareController::ids(), true); @endphp
+          <button type="button" class="hs-cmpbtn {{ $isCmp ? 'on' : '' }}" data-compare="{{ route('compare.toggle', $watch) }}" aria-pressed="{{ $isCmp ? 'true' : 'false' }}" aria-label="{{ $isCmp ? __('shop.compare.remove') : __('shop.compare.add') }}" title="{{ $isCmp ? __('shop.compare.remove') : __('shop.compare.add') }}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h15M15 4l4 4-4 4M20 16H5M9 12l-4 4 4 4"/></svg>
+      </button>
+          @endunless
           @if($watch->location_label)
             <button type="button" class="hs-pin" aria-label="{{ __('shop.card.location') }}: {{ $watch->location_label }}">
               <svg viewBox="0 0 22 28"><path fill="currentColor" d="M11 0C4.9 0 0 4.8 0 10.8 0 18.6 11 28 11 28s11-9.4 11-17.2C22 4.8 17.1 0 11 0zm0 15.2a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"/></svg>

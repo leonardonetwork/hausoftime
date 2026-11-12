@@ -136,6 +136,33 @@
     });
   });
 
+  // ── Comparador ──────────────────────────────────────────────────
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-compare]');
+    if (!btn) return;
+    e.preventDefault();
+    btn.classList.add('pop'); setTimeout(function () { btn.classList.remove('pop'); }, 460);
+    post(btn.dataset.compare).then(function (r) {
+      if (!r._ok) return;
+      if (r.full) { toast(H.i18n.cmpFull, { href: H.routes.compare, label: H.i18n.cmpGo }); return; }
+      $$('[data-compare="' + btn.dataset.compare + '"]').forEach(function (b) {
+        b.classList.toggle('on', r.active);
+        b.setAttribute('aria-pressed', r.active ? 'true' : 'false');
+        var l = r.active ? H.i18n.cmpRemove : H.i18n.cmpAdd;
+        b.setAttribute('aria-label', l); b.title = l;
+      });
+      var bar = $('#hsCmpBar');
+      if (bar) {
+        bar.dataset.count = r.count;
+        bar.classList.toggle('show', r.count > 0);
+        $$('[data-cmp-count]', bar).forEach(function (c) { c.textContent = r.count; });
+        var lbl = $('[data-cmp-label]', bar);
+        if (lbl) lbl.textContent = r.count === 1 ? H.i18n.cmpOne : H.i18n.cmpMany.replace('#', r.count);
+        if (r.active) { bar.classList.remove('bump'); void bar.offsetWidth; bar.classList.add('bump'); }
+      }
+    });
+  });
+
   // ── Pin ubicazione (tap su mobile) ──────────────────────────────
   document.addEventListener('click', function (e) {
     var pin = e.target.closest('.hs-pin');

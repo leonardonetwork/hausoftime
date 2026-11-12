@@ -235,6 +235,10 @@ Route::middleware('shop')->group(function () {
     Route::get('/favoritos',            [Shop\FavoriteController::class, 'index'])->name('favorites.index');
     Route::post('/favoritos/{watch}',   [Shop\FavoriteController::class, 'toggle'])->name('favorites.toggle')->middleware('throttle:60,1');
 
+    Route::get('/comparar',             [Shop\CompareController::class, 'index'])->name('compare.index');
+    Route::post('/comparar/{watch}',    [Shop\CompareController::class, 'toggle'])->name('compare.toggle')->middleware('throttle:60,1');
+    Route::delete('/comparar',          [Shop\CompareController::class, 'clear'])->name('compare.clear');
+
     Route::get('/cesta',                [Shop\BagController::class, 'index'])->name('bag.index');
     Route::post('/cesta/{watch}',       [Shop\BagController::class, 'add'])->name('bag.add');
     Route::delete('/cesta/{watch}',     [Shop\BagController::class, 'remove'])->name('bag.remove');

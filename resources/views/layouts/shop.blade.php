@@ -9,6 +9,7 @@
   $catCount = fn ($c) => $pubCounts->whereIn('category', array_filter([$c->name_es, $c->name_en]))->count();
   $featured = \App\Models\Watch::published()->orderByDesc('is_featured')->latest('approved_at')->first();
   $favCount = $authUser ? $authUser->favorites()->count() : count(session('hot_favorites', []));
+  $cmpCount = count(\App\Http\Controllers\Shop\CompareController::ids());
 @endphp
 <!DOCTYPE html>
 <html lang="{{ $locale }}">
@@ -182,12 +183,18 @@
       <div>
         <img src="/images/logo-dark.png" alt="HAUS OF TIME">
         <p>{{ __('shop.footer.tagline') }}</p>
+        <nav class="hs-footer__lang" aria-label="{{ __('shop.footer.language') }}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>
+          <a href="{{ route('lang.switch', 'es') }}" lang="es" hreflang="es" class="{{ $locale === 'es' ? 'on' : '' }}" @if($locale === 'es') aria-current="true" @endif>Español</a>
+          <a href="{{ route('lang.switch', 'en') }}" lang="en" hreflang="en" class="{{ $locale === 'en' ? 'on' : '' }}" @if($locale === 'en') aria-current="true" @endif>English</a>
+        </nav>
       </div>
       <div class="hs-footer__cols">
         <div>
           <h4>{{ __('shop.nav.watches') }}</h4>
           <a href="{{ route('shop.index') }}">{{ __('shop.nav.all_watches') }}</a>
           <a href="{{ route('shop.index', ['certificado' => 1]) }}">{{ __('shop.nav.certified_only') }}</a>
+          <a href="{{ route('compare.index') }}">{{ __('shop.compare.nav') }}</a>
           <a href="{{ route('evaluation.index') }}">{{ __('shop.nav.evaluation') }}</a>
           <a href="{{ route('sell') }}">{{ __('shop.nav.sell') }}</a>
         </div>
@@ -211,6 +218,13 @@
     </div>
   </footer>
 
+  @unless(request()->routeIs('compare.index'))
+  <a href="{{ route('compare.index') }}" class="hs-cmpbar {{ $cmpCount ? 'show' : '' }}" id="hsCmpBar" data-count="{{ $cmpCount }}">
+    <span class="hs-cmpbar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h15M15 4l4 4-4 4M20 16H5M9 12l-4 4 4 4"/></svg><b data-cmp-count>{{ $cmpCount }}</b></span>
+    <span class="hs-cmpbar__txt" data-cmp-label>{{ trans_choice('shop.compare.bar', max($cmpCount, 1)) }}</span>
+    <span class="hs-cmpbar__go">{{ __('shop.compare.go') }} →</span>
+  </a>
+  @endunless
   <div class="hs-toast" id="hsToast" role="status" aria-live="polite"></div>
 
   <script>
@@ -218,9 +232,12 @@
       csrf: document.querySelector('meta[name="csrf-token"]').content,
       i18n: {
         fav: @json(__('shop.card.favorite')), unfav: @json(__('shop.card.unfavorite')),
-        bag: @json(__('shop.nav.bag')), checkout: @json(__('shop.bag.checkout')), copied: @json(__('shop.product.copied'))
+        bag: @json(__('shop.nav.bag')), checkout: @json(__('shop.bag.checkout')), copied: @json(__('shop.product.copied')),
+        cmpAdd: @json(__('shop.compare.add')), cmpRemove: @json(__('shop.compare.remove')), cmpAdded: @json(__('shop.compare.added')),
+        cmpFull: @json(__('shop.compare.full', ['max' => \App\Http\Controllers\Shop\CompareController::MAX])), cmpGo: @json(__('shop.compare.go')),
+        cmpOne: @json(trans_choice('shop.compare.bar', 1)), cmpMany: @json(trans_choice('shop.compare.bar', 2, ['count' => '#']))
       },
-      routes: { bag: @json(route('bag.index')), checkout: @json(route('checkout.index')) }
+      routes: { bag: @json(route('bag.index')), checkout: @json(route('checkout.index')), compare: @json(route('compare.index')) }
     };
   </script>
   <script src="/js/shop.js?v={{ filemtime(public_path('js/shop.js')) }}" defer></script>
