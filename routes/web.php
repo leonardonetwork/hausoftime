@@ -235,6 +235,9 @@ Route::middleware('shop')->group(function () {
     Route::get('/favoritos',            [Shop\FavoriteController::class, 'index'])->name('favorites.index');
     Route::post('/favoritos/{watch}',   [Shop\FavoriteController::class, 'toggle'])->name('favorites.toggle')->middleware('throttle:60,1');
 
+    // Home alternative per il cliente (noindex)
+    Route::get('/home-{variant}',       [Shop\AltHomeController::class, 'show'])->name('home.alt')->whereIn('variant', ['2', '3']);
+
     Route::get('/comparar',             [Shop\CompareController::class, 'index'])->name('compare.index');
     Route::post('/comparar/{watch}',    [Shop\CompareController::class, 'toggle'])->name('compare.toggle')->middleware('throttle:60,1');
     Route::delete('/comparar',          [Shop\CompareController::class, 'clear'])->name('compare.clear');
